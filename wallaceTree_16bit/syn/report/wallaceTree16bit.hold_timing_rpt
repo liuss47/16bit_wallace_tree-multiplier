@@ -1,0 +1,56 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : wallaceTree16bit
+Version: U-2022.12-SP1
+Date   : Sat May 18 07:19:13 2024
+****************************************
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: input_a[15]
+              (input port clocked by clk)
+  Endpoint: result[31] (output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.95       0.95
+  input external delay                                    0.00       0.95 f
+  input_a[15] (in)                                        0.00       0.95 f
+  C518/Y (AND2X1)                                         0.04       0.99 f
+  ha51/x (half_adder_1)                                   0.00       0.99 f
+  ha51/U3/Y (AND2X1)                                      0.06       1.05 f
+  ha51/c (half_adder_1)                                   0.00       1.05 f
+  car/B[31] (carry_lookahead_adder32)                     0.00       1.05 f
+  car/CLA7/y[3] (four_bit_cla_1)                          0.00       1.05 f
+  car/CLA7/cla3/b (bit_cla_1)                             0.00       1.05 f
+  car/CLA7/cla3/U2/Y (INVX1)                              0.01       1.06 r
+  car/CLA7/cla3/U1/Y (MUX2X1)                             0.02       1.07 f
+  car/CLA7/cla3/s (bit_cla_1)                             0.00       1.07 f
+  car/CLA7/s[3] (four_bit_cla_1)                          0.00       1.07 f
+  car/Sum[31] (carry_lookahead_adder32)                   0.00       1.07 f
+  U81/Y (INVX2)                                           0.02       1.10 r
+  U82/Y (INVX8)                                           0.06       1.16 f
+  result[31] (out)                                        0.00       1.16 f
+  data arrival time                                                  1.16
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.95       0.95
+  clock uncertainty                                       0.47       1.42
+  output external delay                                   0.00       1.42
+  data required time                                                 1.42
+  --------------------------------------------------------------------------
+  data required time                                                 1.42
+  data arrival time                                                 -1.16
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.27
+
+
+1

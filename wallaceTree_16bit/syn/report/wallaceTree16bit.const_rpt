@@ -1,0 +1,48 @@
+ 
+****************************************
+Report : constraint
+Design : wallaceTree16bit
+Version: U-2022.12-SP1
+Date   : Sat May 18 07:19:13 2024
+****************************************
+
+
+                                                   Weighted
+    Group (max_delay/setup)      Cost     Weight     Cost
+    -----------------------------------------------------
+    clk                          0.00      1.00      0.00
+    default                      0.00      1.00      0.00
+    -----------------------------------------------------
+    max_delay/setup                                  0.00
+
+                              Total Neg  Critical
+    Group (critical_range)      Slack    Endpoints   Cost
+    -----------------------------------------------------
+    clk                          0.00         0      0.00
+    default                      0.00         0      0.00
+    -----------------------------------------------------
+    critical_range                                   0.00
+
+                                                   Weighted
+    Group (min_delay/hold)       Cost     Weight     Cost
+    -----------------------------------------------------
+    clk (no fix_hold)            0.00      1.00      0.00
+    default                      0.00      1.00      0.00
+    -----------------------------------------------------
+    min_delay/hold                                   0.00
+    Constraint                                     Slack
+    ----------------------------------------------------
+    max_leakage_power                           -30428.62 (VIOLATED)
+
+
+    Constraint                                       Cost
+    -----------------------------------------------------
+    multiport_net                                   23.00 (VIOLATED)
+    max_capacitance                                  0.53 (VIOLATED)
+    max_delay/setup                                  0.00 (MET)
+    critical_range                                   0.00 (MET)
+    max_leakage_power                            30428.62 (VIOLATED)
+    max_area                                      5978.88 (VIOLATED)
+
+
+1

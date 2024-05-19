@@ -1,0 +1,453 @@
+#--------------------------Specify Libraries--------------------------
+set DESIGN_PATH  /home/summer/Synopsys/syn/FreePDK/FreePDK45/osu_soc/lib/files
+/home/summer/Synopsys/syn/FreePDK/FreePDK45/osu_soc/lib/files
+set search_path "$search_path $DESIGN_PATH"
+. /home/summer/Synopsys/syn/U-2022.12-SP1/libraries/syn /home/summer/Synopsys/syn/U-2022.12-SP1/dw/syn_ver /home/summer/Synopsys/syn/U-2022.12-SP1/dw/sim_ver /home/summer/Synopsys/syn/FreePDK/FreePDK45/osu_soc/lib/files
+set target_library "gscl45nm.db"
+gscl45nm.db
+set link_library "* $target_library"
+* gscl45nm.db
+echo "\n\nSettings:"
+
+
+Settings:
+echo "search_path: $search_path"
+search_path: . /home/summer/Synopsys/syn/U-2022.12-SP1/libraries/syn /home/summer/Synopsys/syn/U-2022.12-SP1/dw/syn_ver /home/summer/Synopsys/syn/U-2022.12-SP1/dw/sim_ver /home/summer/Synopsys/syn/FreePDK/FreePDK45/osu_soc/lib/files
+echo "link_library: $link_library"
+link_library: * gscl45nm.db
+echo "target_library: $target_library"
+target_library: gscl45nm.db
+echo "\n\nI'm Ready!"
+
+
+I'm Ready!
+#set search_path "$TAR_PATH $MEM_LINK_PATH"
+#--------------------------Prepare Filelist---------------------------
+set FILE_LIST ""
+set f [open "../syn/filelist_syn.f" r]
+file14
+while {![eof $f]} {
+    gets $f line
+    append FILE_LIST "$line "
+}
+echo $FILE_LIST
+/home/summer/Desktop/Project/wallaceTree_16bit/src/4bca.v /home/summer/Desktop/Project/wallaceTree_16bit/src/CA32.v /home/summer/Desktop/Project/wallaceTree_16bit/src/cla.v /home/summer/Desktop/Project/wallaceTree_16bit/src/FA.v /home/summer/Desktop/Project/wallaceTree_16bit/src/HA.v /home/summer/Desktop/Project/wallaceTree_16bit/src/WallaceTree.v  
+close $f
+#--------------------------Read Designs------------------------------
+set TOP_DESIGN wallaceTree16bit
+wallaceTree16bit
+analyze -format verilog $FILE_LIST 
+Running PRESTO HDLC
+Compiling source file /home/summer/Desktop/Project/wallaceTree_16bit/src/4bca.v
+Compiling source file /home/summer/Desktop/Project/wallaceTree_16bit/src/CA32.v
+Compiling source file /home/summer/Desktop/Project/wallaceTree_16bit/src/cla.v
+Compiling source file /home/summer/Desktop/Project/wallaceTree_16bit/src/FA.v
+Compiling source file /home/summer/Desktop/Project/wallaceTree_16bit/src/HA.v
+Compiling source file /home/summer/Desktop/Project/wallaceTree_16bit/src/WallaceTree.v
+Presto compilation completed successfully.
+Loading db file '/home/summer/Synopsys/syn/FreePDK/FreePDK45/osu_soc/lib/files/gscl45nm.db'
+1
+elaborate $TOP_DESIGN
+Loading db file '/home/summer/Synopsys/syn/U-2022.12-SP1/libraries/syn/gtech.db'
+Loading db file '/home/summer/Synopsys/syn/U-2022.12-SP1/libraries/syn/standard.sldb'
+  Loading link library 'gscl45nm'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (wallaceTree16bit)
+Elaborated 1 design.
+Current design is now 'wallaceTree16bit'.
+Information: Building the design 'half_adder'. (HDL-193)
+Presto compilation completed successfully. (half_adder)
+Information: Building the design 'full_adder'. (HDL-193)
+Presto compilation completed successfully. (full_adder)
+Information: Building the design 'carry_lookahead_adder32'. (HDL-193)
+Presto compilation completed successfully. (carry_lookahead_adder32)
+Information: Building the design 'four_bit_cla'. (HDL-193)
+Presto compilation completed successfully. (four_bit_cla)
+Information: Building the design 'bit_cla'. (HDL-193)
+Presto compilation completed successfully. (bit_cla)
+1
+#-------------------------------SDC----------------------------------
+source ../syn/script/Sdc.tcl
+1
+#--------------------Map and Optimize the Design---------------------
+compile_ultra -no_autoungroup -incremental -no_boundary_optimization
+Warning: The value of variable 'compile_preserve_subdesign_interfaces' has been changed to true because '-no_boundary_optimization' is used. (OPT-133)
+Information: Starting from 2013.12 release, constant propagation is enabled even when boundary optimization is disabled. (OPT-1318)
+Loading db file '/home/summer/Synopsys/syn/U-2022.12-SP1/libraries/syn/dw_foundation.sldb'
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Performing power optimization. (PWR-850)
+Alib files are up-to-date.
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | U-2022.12-DWBB_202212.1 |     *     |
+| Licensed DW Building Blocks        | U-2022.12-DWBB_202212.1 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler                                                                   |
+| Comand Line  | compile_ultra -no_autoungroup -no_boundary_optimization -incremental              |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 2224                                   |
+| Number of User Hierarchies                              | 293                                    |
+| Sequential Cell Count                                   | 0                                      |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 0                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 0                                      |
+| Number of Dont Touch Nets                               | 2                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+
+Information: There are 14 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+
+Loaded alib file './alib-52/gscl45nm.db.alib'
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping  (Incremental)
+  ------------------------
+  Processing 'bit_cla_0'
+  Processing 'four_bit_cla_0'
+  Processing 'carry_lookahead_adder32'
+  Processing 'half_adder_0'
+  Processing 'full_adder_0'
+  Processing 'wallaceTree16bit'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01    5158.1      0.73      11.0    4295.0                           20894.2578
+    0:00:01    5158.1      0.73      11.0    4295.0                           20894.2578
+
+  Beginning Mapping Optimizations  (Ultra High effort)  (Incremental)
+  -------------------------------
+
+  Beginning Incremental Implementation Selection
+  ----------------------------------------------
+    0:00:01    5012.6      0.73      10.9    4205.7                           20392.0645
+    0:00:01    5012.6      0.73      10.9    4205.7                           20392.0645
+    0:00:01    5012.6      0.73      10.9    4205.7                           20392.0645
+    0:00:01    5012.6      0.73      10.9    4205.7                           20392.0645
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01    5065.6      0.54       8.2    3970.0                           20602.9727
+    0:00:01    5065.6      0.54       8.2    3970.0                           20602.9727
+    0:00:01    5084.4      0.54       8.2    3964.2                           20960.9551
+    0:00:01    5084.4      0.54       8.2    3964.2                           20960.9551
+    0:00:01    5089.1      0.53       8.1    3968.4                           20983.8184
+    0:00:01    5089.1      0.53       8.1    3968.4                           20983.8184
+    0:00:02    5289.9      0.24       1.5    2919.3                           23761.4434
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:02    5289.9      0.24       1.5    2919.3                           23761.4434
+    0:00:02    5289.9      0.24       1.5    2919.3                           23761.4434
+    0:00:02    5289.9      0.24       1.5    2919.3                           23761.4434
+    0:00:02    5289.9      0.24       1.5    2919.3                           23761.4434
+    0:00:02    5289.9      0.24       1.5    2919.3                           23761.4434
+    0:00:02    5289.9      0.24       1.5    2919.3                           23761.4434
+
+
+  Beginning Design Rule Fixing  (max_capacitance)
+  ----------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:02    5289.9      0.24       1.5    2919.3                           23761.4434
+    0:00:02    5940.4      0.00       0.0     693.7 fa130/x                   27629.1094
+    0:00:02    6022.5      0.00       0.0     579.8                           28320.4863
+    0:00:02    5972.8      0.00       0.0     579.8                           27664.0762
+    0:00:02    5972.8      0.00       0.0     579.8                           27664.0762
+    0:00:02    5972.8      0.00       0.0     579.8                           27664.0762
+    0:00:02    5972.8      0.00       0.0     579.8                           27664.0762
+    0:00:02    5972.8      0.00       0.0     579.8                           27664.0762
+    0:00:02    5972.8      0.00       0.0     579.8                           27664.0762
+    0:00:02    5972.8      0.00       0.0     579.8                           27664.0762
+    0:00:02    5972.8      0.00       0.0     579.8                           27664.0762
+    0:00:02    5972.8      0.00       0.0     579.8                           27664.0762
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:02    5972.8      0.00       0.0     579.8                           27664.0762
+    0:00:02    5740.9      0.00       0.0     579.8                           27184.3359
+    0:00:02    5738.1      0.00       0.0     579.0                           27108.4668
+    0:00:02    5738.1      0.00       0.0     579.0                           27108.4668
+    0:00:02    5738.1      0.00       0.0     579.0                           27108.4668
+    0:00:02    5738.1      0.00       0.0     579.0                           27108.4668
+    0:00:02    5738.1      0.00       0.0     579.0                           27108.4668
+    0:00:02    5738.1      0.00       0.0     579.0                           27108.4668
+    0:00:02    5738.1      0.00       0.0     579.0                           27108.4668
+    0:00:02    5738.1      0.00       0.0     579.0                           27108.4668
+    0:00:02    5738.1      0.00       0.0     579.0                           27108.4668
+    0:00:02    5738.1      0.00       0.0     579.0                           27108.4668
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:02    5738.1      0.00       0.0     579.0                           27108.4668
+    0:00:02    5738.1      0.00       0.0     579.0                           27108.4668
+    0:00:03    6075.6      0.00       0.0     426.0 fa133/n5                  28157.0996
+    0:00:03    6161.4      0.02       0.1     362.3                           28816.4727
+    0:00:03    6106.1      0.02       0.0     362.3                           28139.0156
+    0:00:03    6069.5      0.01       0.0     355.7                           28230.3613
+    0:00:03    6069.5      0.01       0.0     355.7                           28230.3613
+    0:00:03    6051.2      0.00       0.0     371.1                           28227.2207
+    0:00:03    6051.2      0.00       0.0     371.1                           28227.2207
+    0:00:03    6051.2      0.00       0.0     371.1                           28227.2207
+    0:00:03    6051.2      0.00       0.0     371.1                           28227.2207
+    0:00:03    6051.2      0.00       0.0     371.1                           28227.2207
+    0:00:03    6051.2      0.00       0.0     371.1                           28227.2207
+    0:00:03    6051.2      0.00       0.0     371.1                           28227.2207
+    0:00:03    6051.2      0.00       0.0     371.1                           28227.2207
+    0:00:03    6051.2      0.00       0.0     371.1                           28227.2207
+    0:00:03    5978.9      0.00       0.0     370.9                           26886.8066
+Loading db file '/home/summer/Synopsys/syn/FreePDK/FreePDK45/osu_soc/lib/files/gscl45nm.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+1
+#----------------------Save Design Database--------------------------
+change_names -rules verilog -hierarchy
+Warning: The specified replacement character (_) is conflicting with the specified allowed or restricted character.   (UCN-4)
+Warning: In the design bit_cla_0, net 'a' is connecting multiple ports. (UCN-1)
+Warning: In the design bit_cla_1, net 'b' is connecting multiple ports. (UCN-1)
+Warning: In the design bit_cla_25, net 'p' is connecting multiple ports. (UCN-1)
+Warning: In the design bit_cla_26, net 'a' is connecting multiple ports. (UCN-1)
+Warning: In the design bit_cla_27, net 'a' is connecting multiple ports. (UCN-1)
+Warning: In the design bit_cla_28, net 'a' is connecting multiple ports. (UCN-1)
+Warning: In the design bit_cla_29, net 'a' is connecting multiple ports. (UCN-1)
+Warning: In the design bit_cla_30, net 'a' is connecting multiple ports. (UCN-1)
+Warning: In the design bit_cla_31, net 'a' is connecting multiple ports. (UCN-1)
+1
+set_fix_multiple_port_nets -all -buffer_constants
+1
+#---------------Check the Synthesized Design for Consistency---------
+check_design -summary > ../syn/report/check_design.rpt
+check_timing > ../syn/report/check_timing.rpt
+#---------------------Report Timing and Area-------------------------
+report_qor                  > ../syn/report/$TOP_DESIGN.qor_rpt
+report_timing -max_paths 1000 > ../syn/report/$TOP_DESIGN.timing_rpt
+report_timing -path full    > ../syn/report/$TOP_DESIGN.full_timing_rpt
+report_timing -delay max    > ../syn/report/$TOP_DESIGN.setup_timing_rpt
+report_timing -delay min    > ../syn/report/$TOP_DESIGN.hold_timing_rpt
+report_reference            > ../syn/report/$TOP_DESIGN.ref_rpt
+report_area                 > ../syn/report/$TOP_DESIGN.area_rpt
+report_constraints          > ../syn/report/$TOP_DESIGN.const_rpt
+report_constraint -all_violators > ../syn/report/$TOP_DESIGN.violators_rpt
+report_power > ../syn/report/$TOP_DESIGN.power_rpt
+check_timing > ../syn/log/last_check_timing.log
+#---------------------Generate Files -------------------------
+write -f verilog -hierarchy -output ../syn/mapped/$TOP_DESIGN.v
+Writing verilog file '/home/summer/Desktop/Project/wallaceTree_16bit/syn/mapped/wallaceTree16bit.v'.
+Warning: Verilog 'assign' or 'tran' statements are written out. (VO-4)
+1
+write_sdc ../syn/mapped/$TOP_DESIGN.sdc
+1
+write_sdf -context verilog ../syn/mapped/$TOP_DESIGN.sdf
+Information: Annotated 'cell' delays are assumed to include load delay. (UID-282)
+Information: Writing timing information to file '/home/summer/Desktop/Project/wallaceTree_16bit/syn/mapped/wallaceTree16bit.sdf'. (WT-3)
+1
+1
+dc_shell> gui_start
+Current design is 'wallaceTree16bit'.
+Current design is 'wallaceTree16bit'.
+dc_shell> set {worst.endpts.default.clk.hold.paths} [::get_timing_paths -delay_type min -path_type full_clock_expanded -to [get_selection] -max_paths 999999 -nworst 1 -slack_lesser_than 0 -include_hierarchical_pins -group {clk}]
+Warning: Worst timing paths might not be returned. (TIM-104)
+{path0}
+dc_shell> 
+****************************************
+Report : timing
+Design : wallaceTree16bit
+Version: U-2022.12-SP1
+Date   : Sat May 18 08:47:02 PDT 2024
+****************************************
+
+  Startpoint: input_a[15]
+              (edge-triggered input port clocked by clk)
+  Endpoint: result[31]
+            (edge-triggered output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                    Incr       Path 
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                    0.00       0.00 
+  clock network delay (ideal)                              0.95       0.95 
+  input external delay                                     0.00       0.95 
+  input_a[15] (in)                                         0.95       0.95 f
+  C518/A (AND2X1)                                          0.00       0.95 f
+  C518/Y (AND2X1)                                          0.04       0.99 f
+  ha51/x (half_adder_1)                                    0.00       0.99 f
+  ha51/x (in)                                              0.00       0.99 f
+  ha51/U3/B (AND2X1)                                       0.00       0.99 f
+  ha51/U3/Y (AND2X1)                                       0.06       1.05 f
+  ha51/c (out)                                             0.00       1.05 f
+  ha51/c (half_adder_1)                                    0.00       1.05 f
+  car/B[31] (carry_lookahead_adder32)                      0.00       1.05 f
+  car/B[31] (in)                                           0.00       1.05 f
+  car/CLA7/y[3] (four_bit_cla_1)                           0.00       1.05 f
+  car/CLA7/y[3] (in)                                       0.00       1.05 f
+  car/CLA7/cla3/b (bit_cla_1)                              0.00       1.05 f
+  car/CLA7/cla3/b (in)                                     0.00       1.05 f
+  car/CLA7/cla3/U2/A (INVX1)                               0.00       1.05 f
+  car/CLA7/cla3/U2/Y (INVX1)                               0.01       1.06 r
+  car/CLA7/cla3/U1/B (MUX2X1)                              0.00       1.06 r
+  car/CLA7/cla3/U1/Y (MUX2X1)                              0.02       1.07 f
+  car/CLA7/cla3/s (out)                                    0.00       1.07 f
+  car/CLA7/cla3/s (bit_cla_1)                              0.00       1.07 f
+  car/CLA7/s[3] (out)                                      0.00       1.07 f
+  car/CLA7/s[3] (four_bit_cla_1)                           0.00       1.07 f
+  car/Sum[31] (out)                                        0.00       1.07 f
+  car/Sum[31] (carry_lookahead_adder32)                    0.00       1.07 f
+  U81/A (INVX2)                                            0.00       1.07 f
+  U81/Y (INVX2)                                            0.02       1.10 r
+  U82/A (INVX8)                                            0.00       1.10 r
+  U82/Y (INVX8)                                            0.06       1.16 f
+  result[31] (out)                                         0.00       1.16 f
+  data arrival time                                                   1.16 
+
+  clock clk (rise edge)                                    0.00       0.00 
+  clock network delay (ideal)                              0.95       0.95 
+  clock uncertainty                                        0.47       1.42 
+  output external delay                                    0.00       1.42 
+  library hold time                                        0.00       1.42 
+  data required time                                                  1.42 
+  --------------------------------------------------------------------------
+  data arrival time                                                   1.16 
+  data required time                                                 -1.42 
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                   -0.27 
+
+
+dc_shell> set {worst.endpts.default.clk.hold.paths} [::get_timing_paths -delay_type min -path_type full_clock_expanded -to [get_selection] -max_paths 999999 -nworst 1 -slack_lesser_than 0 -include_hierarchical_pins -group {clk}]
+Warning: Worst timing paths might not be returned. (TIM-104)
+{path1}
+dc_shell> 
+****************************************
+Report : timing
+Design : wallaceTree16bit
+Version: U-2022.12-SP1
+Date   : Sat May 18 08:47:21 PDT 2024
+****************************************
+
+  Startpoint: input_a[1]
+              (edge-triggered input port clocked by clk)
+  Endpoint: result[5]
+            (edge-triggered output port clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Point                                                    Incr       Path 
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                    0.00       0.00 
+  clock network delay (ideal)                              0.95       0.95 
+  input external delay                                     0.00       0.95 
+  input_a[1] (in)                                          0.95       0.95 f
+  U78/A (AND2X1)                                           0.00       0.95 f
+  U78/Y (AND2X1)                                           0.04       0.99 f
+  ha0/y (half_adder_0)                                     0.00       0.99 f
+  ha0/y (in)                                               0.00       0.99 f
+  ha0/U3/A (AND2X1)                                        0.00       0.99 f
+  ha0/U3/Y (AND2X1)                                        0.04       1.03 f
+  ha0/c (out)                                              0.00       1.03 f
+  ha0/c (half_adder_0)                                     0.00       1.03 f
+  ha10/y (half_adder_42)                                   0.00       1.03 f
+  ha10/y (in)                                              0.00       1.03 f
+  ha10/U3/A (AND2X1)                                       0.00       1.03 f
+  ha10/U3/Y (AND2X1)                                       0.04       1.07 f
+  ha10/c (out)                                             0.00       1.07 f
+  ha10/c (half_adder_42)                                   0.00       1.07 f
+  ha17/y (half_adder_35)                                   0.00       1.07 f
+  ha17/y (in)                                              0.00       1.07 f
+  ha17/U3/A (AND2X1)                                       0.00       1.07 f
+  ha17/U3/Y (AND2X1)                                       0.04       1.11 f
+  ha17/c (out)                                             0.00       1.11 f
+  ha17/c (half_adder_35)                                   0.00       1.11 f
+  ha27/y (half_adder_25)                                   0.00       1.11 f
+  ha27/y (in)                                              0.00       1.11 f
+  ha27/U3/A (AND2X1)                                       0.00       1.11 f
+  ha27/U3/Y (AND2X1)                                       0.04       1.15 f
+  ha27/c (out)                                             0.00       1.15 f
+  ha27/c (half_adder_25)                                   0.00       1.15 f
+  ha33/y (half_adder_19)                                   0.00       1.15 f
+  ha33/y (in)                                              0.00       1.15 f
+  ha33/U2/A (INVX1)                                        0.00       1.15 f
+  ha33/U2/Y (INVX1)                                        0.01       1.16 r
+  ha33/U1/B (MUX2X1)                                       0.00       1.16 r
+  ha33/U1/Y (MUX2X1)                                       0.01       1.17 f
+  ha33/U3/A (BUFX2)                                        0.00       1.17 f
+  ha33/U3/Y (BUFX2)                                        0.23       1.41 f
+  ha33/s (out)                                             0.00       1.41 f
+  ha33/s (half_adder_19)                                   0.00       1.41 f
+  car/A[5] (carry_lookahead_adder32)                       0.00       1.41 f
+  car/A[5] (in)                                            0.00       1.41 f
+  car/CLA1/x[1] (four_bit_cla_7)                           0.00       1.41 f
+  car/CLA1/x[1] (in)                                       0.00       1.41 f
+  car/CLA1/cla1/a (bit_cla_27)                             0.00       1.41 f
+  car/CLA1/cla1/a (in)                                     0.00       1.41 f
+  car/CLA1/cla1/s (out)                                    0.00       1.41 f
+  car/CLA1/cla1/s (bit_cla_27)                             0.00       1.41 f
+  car/CLA1/s[1] (out)                                      0.00       1.41 f
+  car/CLA1/s[1] (four_bit_cla_7)                           0.00       1.41 f
+  car/Sum[5] (out)                                         0.00       1.41 f
+  car/Sum[5] (carry_lookahead_adder32)                     0.00       1.41 f
+  result[5] (out)                                          0.00       1.41 f
+  data arrival time                                                   1.41 
+
+  clock clk (rise edge)                                    0.00       0.00 
+  clock network delay (ideal)                              0.95       0.95 
+  clock uncertainty                                        0.47       1.42 
+  output external delay                                    0.00       1.42 
+  library hold time                                        0.00       1.42 
+  data required time                                                  1.42 
+  --------------------------------------------------------------------------
+  data arrival time                                                   1.41 
+  data required time                                                 -1.42 
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                   -0.02 
+
+

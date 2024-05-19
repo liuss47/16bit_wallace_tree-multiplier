@@ -1,0 +1,100 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : wallaceTree16bit
+Version: U-2022.12-SP1
+Date   : Sat May 18 07:19:13 2024
+****************************************
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: input_b[14]
+              (input port clocked by clk)
+  Endpoint: result[30] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[14] (in)                                        0.00       5.70 r
+  C493/Y (AND2X1)                                         0.06       5.76 r
+  fa40/x (full_adder_160)                                 0.00       5.76 r
+  fa40/U3/Y (INVX1)                                       0.03       5.78 f
+  fa40/U2/Y (MUX2X1)                                      0.05       5.84 r
+  fa40/U1/Y (MUX2X1)                                      0.07       5.91 r
+  fa40/s (full_adder_160)                                 0.00       5.91 r
+  fa97/y (full_adder_103)                                 0.00       5.91 r
+  fa97/U6/Y (AND2X1)                                      0.03       5.93 r
+  fa97/U8/Y (INVX1)                                       0.02       5.95 f
+  fa97/U5/Y (NAND2X1)                                     0.01       5.96 r
+  fa97/c (full_adder_103)                                 0.00       5.96 r
+  fa136/x (full_adder_64)                                 0.00       5.96 r
+  fa136/U8/Y (BUFX2)                                      0.04       6.00 r
+  fa136/U3/Y (INVX1)                                      0.02       6.02 f
+  fa136/U2/Y (MUX2X1)                                     0.05       6.08 r
+  fa136/U1/Y (MUX2X1)                                     0.07       6.15 r
+  fa136/s (full_adder_64)                                 0.00       6.15 r
+  fa154/cin (full_adder_46)                               0.00       6.15 r
+  fa154/U2/Y (MUX2X1)                                     0.06       6.20 r
+  fa154/U1/Y (MUX2X1)                                     0.06       6.26 r
+  fa154/s (full_adder_46)                                 0.00       6.26 r
+  fa181/x (full_adder_19)                                 0.00       6.26 r
+  fa181/U3/Y (INVX1)                                      0.03       6.29 f
+  fa181/U2/Y (MUX2X1)                                     0.05       6.34 r
+  fa181/U1/Y (MUX2X1)                                     0.06       6.40 r
+  fa181/s (full_adder_19)                                 0.00       6.40 r
+  fa191/x (full_adder_9)                                  0.00       6.40 r
+  fa191/U3/Y (INVX1)                                      0.03       6.43 f
+  fa191/U2/Y (MUX2X1)                                     0.05       6.48 r
+  fa191/U1/Y (MUX2X1)                                     0.06       6.54 r
+  fa191/s (full_adder_9)                                  0.00       6.54 r
+  car/A[21] (carry_lookahead_adder32)                     0.00       6.54 r
+  car/CLA5/x[1] (four_bit_cla_3)                          0.00       6.54 r
+  car/CLA5/cla1/a (bit_cla_11)                            0.00       6.54 r
+  car/CLA5/cla1/U3/Y (MUX2X1)                             0.07       6.61 r
+  car/CLA5/cla1/p (bit_cla_11)                            0.00       6.61 r
+  car/CLA5/U6/Y (AND2X1)                                  0.05       6.66 r
+  car/CLA5/U7/Y (AOI22X1)                                 0.02       6.69 f
+  car/CLA5/U3/Y (OAI21X1)                                 0.05       6.73 r
+  car/CLA5/gOut (four_bit_cla_3)                          0.00       6.73 r
+  car/U14/Y (INVX1)                                       0.02       6.75 f
+  car/U15/Y (NAND2X1)                                     0.02       6.78 r
+  car/U13/Y (INVX1)                                       0.03       6.80 f
+  car/U10/Y (OAI21X1)                                     0.06       6.86 r
+  car/CLA7/cin (four_bit_cla_1)                           0.00       6.86 r
+  car/CLA7/U13/Y (AOI21X1)                                0.04       6.90 f
+  car/CLA7/U19/Y (INVX1)                                  0.02       6.91 r
+  car/CLA7/U11/Y (AOI21X1)                                0.01       6.92 f
+  car/CLA7/U10/Y (INVX1)                                  0.01       6.93 r
+  car/CLA7/U4/Y (INVX1)                                   0.01       6.94 f
+  car/CLA7/U12/Y (INVX1)                                  0.01       6.95 r
+  car/CLA7/cla2/c (bit_cla_2)                             0.00       6.95 r
+  car/CLA7/cla2/U1/Y (MUX2X1)                             0.04       6.99 r
+  car/CLA7/cla2/s (bit_cla_2)                             0.00       6.99 r
+  car/CLA7/s[2] (four_bit_cla_1)                          0.00       6.99 r
+  car/Sum[30] (carry_lookahead_adder32)                   0.00       6.99 r
+  U2/Y (INVX1)                                            0.04       7.03 f
+  U80/Y (INVX8)                                           0.09       7.12 r
+  result[30] (out)                                        0.00       7.12 r
+  data arrival time                                                  7.12
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.12
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+1

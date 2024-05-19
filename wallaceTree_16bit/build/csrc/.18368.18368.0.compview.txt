@@ -1,0 +1,9 @@
+{"vcs1":{"timestamp_begin":1716033562.474524216, "rt":0.25, "ut":0.13, "st":0.11}}
+{"vcselab":{"timestamp_begin":1716033562.776994977, "rt":0.22, "ut":0.13, "st":0.09}}
+{"link":{"timestamp_begin":1716033563.038734164, "rt":0.11, "ut":0.06, "st":0.06}}
+{"SNPS_VCS_INTERNAL_ROOT_START_TIME": 1716033562.081582775}
+{"VCS_COMP_START_TIME": 1716033562.081582775}
+{"VCS_COMP_END_TIME": 1716033563.247905507}
+{"VCS_USER_OPTIONS": "+v2k -full64 -debug_acc+all -debug_region+cell+encrypt -LDFLAGS -Wl,--no-as-needed -timescale=1ns/1ps -o ./build/simtop -l ./build/log/report.log -P /home/summer/Synopsys/verdi/T-2022.06-SP2/share/PLI/VCS/LINUXAMD64/novas.tab /home/summer/Synopsys/verdi/T-2022.06-SP2/share/PLI/VCS/LINUXAMD64/pli.a /home/summer/Desktop/Project/wallaceTree_16bit/src/4bca.v /home/summer/Desktop/Project/wallaceTree_16bit/src/CA32.v /home/summer/Desktop/Project/wallaceTree_16bit/src/cla.v /home/summer/Desktop/Project/wallaceTree_16bit/src/FA.v /home/summer/Desktop/Project/wallaceTree_16bit/src/HA.v /home/summer/Desktop/Project/wallaceTree_16bit/src/WallaceTree.v /home/summer/Desktop/Project/wallaceTree_16bit/sim/testbench.v"}
+{"vcs1": {"peak_mem": 352632}}
+{"stitch_vcselab": {"peak_mem": 236844}}

@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : reference
+Design : wallaceTree_16bit_comb
+Version: U-2022.12-SP1
+Date   : Sat May 18 08:31:08 2024
+****************************************
+
+Attributes:
+    b - black box (unknown)
+   bo - allows boundary optimization
+    d - dont_touch
+   mo - map_only
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    s - synthetic operator
+    u - contains unmapped logic
+
+Reference          Library       Unit Area   Count    Total Area   Attributes
+-----------------------------------------------------------------------------
+wallaceTree_16bit_comb_DP_OP_9_122_5775_1
+                                768.713392       1    768.713392  h
+wallace_8bit_0                 1206.570280       1   1206.570280  h
+wallace_8bit_1                 1214.548382       1   1214.548382  h
+wallace_8bit_2                 1255.377480       1   1255.377480  h
+wallace_8bit_3                 1226.280880       1   1226.280880  h
+-----------------------------------------------------------------------------
+Total 5 references                                   5671.490413
+1

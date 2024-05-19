@@ -1,0 +1,32 @@
+{
+    "four_bit_cla": [
+        "four_bit_cla",
+        "M9sxi",
+        "module",
+        1
+    ],
+    "full_adder": [
+        "full_adder",
+        "BEdzp",
+        "module",
+        2
+    ],
+    "half_adder": [
+        "half_adder",
+        "ArxBC",
+        "module",
+        3
+    ],
+    "testbench": [
+        "testbench",
+        "iAVhC",
+        "module",
+        4
+    ],
+    "...MASTER...": [
+        "SIM",
+        "amcQw",
+        "module",
+        5
+    ]
+}

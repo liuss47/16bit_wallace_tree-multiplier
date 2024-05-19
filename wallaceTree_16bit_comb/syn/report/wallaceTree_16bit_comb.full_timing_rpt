@@ -1,0 +1,271 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : wallaceTree_16bit_comb
+Version: U-2022.12-SP1
+Date   : Sat May 18 08:31:08 2024
+****************************************
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: input_b[1] (input port clocked by clk)
+  Endpoint: result[31] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[1] (in)                                         0.00       5.70 r
+  mult0/b[1] (wallace_8bit_0)                             0.00       5.70 r
+  mult0/U65/Y (AND2X2)                                    0.04       5.74 r
+  mult0/result2_full_adder_1/b (full_adder_0)             0.00       5.74 r
+  mult0/result2_full_adder_1/U8/Y (XNOR2X1)               0.06       5.80 r
+  mult0/result2_full_adder_1/U5/Y (MUX2X1)                0.06       5.85 r
+  mult0/result2_full_adder_1/s (full_adder_0)             0.00       5.85 r
+  mult0/result2_half_adder_1/b (half_adder_31)            0.00       5.85 r
+  mult0/result2_half_adder_1/U5/Y (AND2X2)                0.04       5.90 r
+  mult0/result2_half_adder_1/cout (half_adder_31)         0.00       5.90 r
+  mult0/result3_full_adder_1/cin (full_adder_191)         0.00       5.90 r
+  mult0/result3_full_adder_1/U4/Y (XOR2X1)                0.05       5.95 r
+  mult0/result3_full_adder_1/s (full_adder_191)           0.00       5.95 r
+  mult0/result3_full_adder_2/b (full_adder_190)           0.00       5.95 r
+  mult0/result3_full_adder_2/U3/Y (XNOR2X1)               0.05       5.99 r
+  mult0/result3_full_adder_2/U2/Y (MUX2X1)                0.06       6.05 r
+  mult0/result3_full_adder_2/s (full_adder_190)           0.00       6.05 r
+  mult0/result3_half_adder_1/b (half_adder_30)            0.00       6.05 r
+  mult0/result3_half_adder_1/U5/Y (AND2X2)                0.05       6.10 r
+  mult0/result3_half_adder_1/cout (half_adder_30)         0.00       6.10 r
+  mult0/result4_full_adder_1/cin (full_adder_189)         0.00       6.10 r
+  mult0/result4_full_adder_1/U1/Y (XOR2X1)                0.05       6.15 r
+  mult0/result4_full_adder_1/s (full_adder_189)           0.00       6.15 r
+  mult0/result4_full_adder_2/b (full_adder_188)           0.00       6.15 r
+  mult0/result4_full_adder_2/U9/Y (XNOR2X1)               0.05       6.20 r
+  mult0/result4_full_adder_2/U1/Y (MUX2X1)                0.06       6.26 r
+  mult0/result4_full_adder_2/s (full_adder_188)           0.00       6.26 r
+  mult0/result4_full_adder_3/b (full_adder_187)           0.00       6.26 r
+  mult0/result4_full_adder_3/U3/Y (XNOR2X1)               0.05       6.31 r
+  mult0/result4_full_adder_3/U2/Y (MUX2X1)                0.06       6.36 r
+  mult0/result4_full_adder_3/s (full_adder_187)           0.00       6.36 r
+  mult0/result4_half_adder_1/b (half_adder_29)            0.00       6.36 r
+  mult0/result4_half_adder_1/U5/Y (AND2X2)                0.05       6.41 r
+  mult0/result4_half_adder_1/cout (half_adder_29)         0.00       6.41 r
+  mult0/result5_full_adder_1/cin (full_adder_186)         0.00       6.41 r
+  mult0/result5_full_adder_1/U1/Y (XOR2X1)                0.05       6.46 r
+  mult0/result5_full_adder_1/s (full_adder_186)           0.00       6.46 r
+  mult0/result5_full_adder_2/b (full_adder_185)           0.00       6.46 r
+  mult0/result5_full_adder_2/U5/Y (XNOR2X1)               0.05       6.51 r
+  mult0/result5_full_adder_2/U3/Y (MUX2X1)                0.06       6.57 r
+  mult0/result5_full_adder_2/s (full_adder_185)           0.00       6.57 r
+  mult0/result5_full_adder_3/b (full_adder_184)           0.00       6.57 r
+  mult0/result5_full_adder_3/U3/Y (XNOR2X1)               0.05       6.62 r
+  mult0/result5_full_adder_3/U2/Y (MUX2X1)                0.06       6.68 r
+  mult0/result5_full_adder_3/s (full_adder_184)           0.00       6.68 r
+  mult0/result5_full_adder_4/b (full_adder_183)           0.00       6.68 r
+  mult0/result5_full_adder_4/U3/Y (XNOR2X1)               0.05       6.73 r
+  mult0/result5_full_adder_4/U2/Y (MUX2X1)                0.06       6.79 r
+  mult0/result5_full_adder_4/s (full_adder_183)           0.00       6.79 r
+  mult0/result5_half_adder_1/b (half_adder_28)            0.00       6.79 r
+  mult0/result5_half_adder_1/U4/Y (AND2X2)                0.05       6.83 r
+  mult0/result5_half_adder_1/cout (half_adder_28)         0.00       6.83 r
+  mult0/result6_full_adder_1/cin (full_adder_182)         0.00       6.83 r
+  mult0/result6_full_adder_1/U1/Y (XOR2X1)                0.05       6.88 r
+  mult0/result6_full_adder_1/s (full_adder_182)           0.00       6.88 r
+  mult0/result6_full_adder_2/b (full_adder_181)           0.00       6.88 r
+  mult0/result6_full_adder_2/U5/Y (XNOR2X1)               0.05       6.93 r
+  mult0/result6_full_adder_2/U3/Y (MUX2X1)                0.06       6.99 r
+  mult0/result6_full_adder_2/s (full_adder_181)           0.00       6.99 r
+  mult0/result6_full_adder_3/b (full_adder_180)           0.00       6.99 r
+  mult0/result6_full_adder_3/U2/Y (XNOR2X1)               0.05       7.04 r
+  mult0/result6_full_adder_3/U1/Y (MUX2X1)                0.06       7.10 r
+  mult0/result6_full_adder_3/s (full_adder_180)           0.00       7.10 r
+  mult0/result6_full_adder_4/b (full_adder_179)           0.00       7.10 r
+  mult0/result6_full_adder_4/U3/Y (XNOR2X1)               0.05       7.15 r
+  mult0/result6_full_adder_4/U2/Y (MUX2X1)                0.06       7.21 r
+  mult0/result6_full_adder_4/s (full_adder_179)           0.00       7.21 r
+  mult0/result6_full_adder_5/b (full_adder_178)           0.00       7.21 r
+  mult0/result6_full_adder_5/U3/Y (XNOR2X1)               0.05       7.26 r
+  mult0/result6_full_adder_5/U2/Y (MUX2X1)                0.06       7.31 r
+  mult0/result6_full_adder_5/s (full_adder_178)           0.00       7.31 r
+  mult0/result6_half_adder_1/b (half_adder_27)            0.00       7.31 r
+  mult0/result6_half_adder_1/U5/Y (AND2X2)                0.05       7.36 r
+  mult0/result6_half_adder_1/cout (half_adder_27)         0.00       7.36 r
+  mult0/result7_full_adder_1/cin (full_adder_177)         0.00       7.36 r
+  mult0/result7_full_adder_1/U1/Y (XOR2X1)                0.05       7.41 r
+  mult0/result7_full_adder_1/s (full_adder_177)           0.00       7.41 r
+  mult0/result7_full_adder_2/b (full_adder_176)           0.00       7.41 r
+  mult0/result7_full_adder_2/U5/Y (XNOR2X1)               0.05       7.46 r
+  mult0/result7_full_adder_2/U3/Y (MUX2X1)                0.06       7.52 r
+  mult0/result7_full_adder_2/s (full_adder_176)           0.00       7.52 r
+  mult0/result7_full_adder_3/b (full_adder_175)           0.00       7.52 r
+  mult0/result7_full_adder_3/U2/Y (XNOR2X1)               0.05       7.57 r
+  mult0/result7_full_adder_3/U1/Y (MUX2X1)                0.06       7.63 r
+  mult0/result7_full_adder_3/s (full_adder_175)           0.00       7.63 r
+  mult0/result7_full_adder_4/b (full_adder_174)           0.00       7.63 r
+  mult0/result7_full_adder_4/U11/Y (XNOR2X1)              0.05       7.67 r
+  mult0/result7_full_adder_4/U10/Y (INVX1)                0.02       7.70 f
+  mult0/result7_full_adder_4/U9/Y (NAND2X1)               0.01       7.71 r
+  mult0/result7_full_adder_4/U5/Y (NAND2X1)               0.03       7.74 f
+  mult0/result7_full_adder_4/s (full_adder_174)           0.00       7.74 f
+  mult0/result7_full_adder_5/b (full_adder_173)           0.00       7.74 f
+  mult0/result7_full_adder_5/U3/Y (XNOR2X1)               0.04       7.78 r
+  mult0/result7_full_adder_5/U1/Y (MUX2X1)                0.06       7.84 r
+  mult0/result7_full_adder_5/s (full_adder_173)           0.00       7.84 r
+  mult0/result7_full_adder_6/b (full_adder_172)           0.00       7.84 r
+  mult0/result7_full_adder_6/U5/Y (XNOR2X1)               0.05       7.89 r
+  mult0/result7_full_adder_6/U3/Y (MUX2X1)                0.05       7.94 r
+  mult0/result7_full_adder_6/s (full_adder_172)           0.00       7.94 r
+  mult0/result7_half_adder_1/b (half_adder_26)            0.00       7.94 r
+  mult0/result7_half_adder_1/U6/Y (AND2X2)                0.04       7.98 r
+  mult0/result7_half_adder_1/cout (half_adder_26)         0.00       7.98 r
+  mult0/result8_full_adder_1/cin (full_adder_171)         0.00       7.98 r
+  mult0/result8_full_adder_1/U4/Y (XOR2X1)                0.05       8.03 r
+  mult0/result8_full_adder_1/s (full_adder_171)           0.00       8.03 r
+  mult0/result8_full_adder_2/b (full_adder_170)           0.00       8.03 r
+  mult0/result8_full_adder_2/U5/Y (XNOR2X1)               0.05       8.08 r
+  mult0/result8_full_adder_2/U3/Y (MUX2X1)                0.06       8.14 r
+  mult0/result8_full_adder_2/s (full_adder_170)           0.00       8.14 r
+  mult0/result8_full_adder_3/b (full_adder_169)           0.00       8.14 r
+  mult0/result8_full_adder_3/U2/Y (XNOR2X1)               0.05       8.18 r
+  mult0/result8_full_adder_3/U1/Y (MUX2X1)                0.06       8.25 r
+  mult0/result8_full_adder_3/s (full_adder_169)           0.00       8.25 r
+  mult0/result8_full_adder_4/b (full_adder_168)           0.00       8.25 r
+  mult0/result8_full_adder_4/U12/Y (XNOR2X1)              0.05       8.29 r
+  mult0/result8_full_adder_4/U11/Y (INVX1)                0.02       8.32 f
+  mult0/result8_full_adder_4/U10/Y (NAND2X1)              0.01       8.33 r
+  mult0/result8_full_adder_4/U8/Y (NAND2X1)               0.03       8.35 f
+  mult0/result8_full_adder_4/s (full_adder_168)           0.00       8.35 f
+  mult0/result8_full_adder_5/b (full_adder_167)           0.00       8.35 f
+  mult0/result8_full_adder_5/U3/Y (XNOR2X1)               0.04       8.40 r
+  mult0/result8_full_adder_5/U1/Y (MUX2X1)                0.06       8.46 r
+  mult0/result8_full_adder_5/s (full_adder_167)           0.00       8.46 r
+  mult0/result8_full_adder_6/b (full_adder_166)           0.00       8.46 r
+  mult0/result8_full_adder_6/U3/Y (XNOR2X1)               0.05       8.50 r
+  mult0/result8_full_adder_6/U2/Y (MUX2X1)                0.05       8.55 r
+  mult0/result8_full_adder_6/s (full_adder_166)           0.00       8.55 r
+  mult0/result8_half_adder_1/a (half_adder_25)            0.00       8.55 r
+  mult0/result8_half_adder_1/U4/Y (AND2X2)                0.05       8.60 r
+  mult0/result8_half_adder_1/cout (half_adder_25)         0.00       8.60 r
+  mult0/result9_full_adder_1/cin (full_adder_165)         0.00       8.60 r
+  mult0/result9_full_adder_1/U1/Y (XOR2X1)                0.05       8.65 r
+  mult0/result9_full_adder_1/s (full_adder_165)           0.00       8.65 r
+  mult0/result9_full_adder_2/b (full_adder_164)           0.00       8.65 r
+  mult0/result9_full_adder_2/U5/Y (XNOR2X1)               0.05       8.70 r
+  mult0/result9_full_adder_2/U3/Y (MUX2X1)                0.06       8.76 r
+  mult0/result9_full_adder_2/s (full_adder_164)           0.00       8.76 r
+  mult0/result9_full_adder_3/b (full_adder_163)           0.00       8.76 r
+  mult0/result9_full_adder_3/U3/Y (XNOR2X1)               0.05       8.81 r
+  mult0/result9_full_adder_3/U2/Y (MUX2X1)                0.06       8.87 r
+  mult0/result9_full_adder_3/s (full_adder_163)           0.00       8.87 r
+  mult0/result9_full_adder_4/b (full_adder_162)           0.00       8.87 r
+  mult0/result9_full_adder_4/U11/Y (XNOR2X1)              0.05       8.91 r
+  mult0/result9_full_adder_4/U10/Y (INVX1)                0.02       8.94 f
+  mult0/result9_full_adder_4/U9/Y (NAND2X1)               0.01       8.95 r
+  mult0/result9_full_adder_4/U5/Y (NAND2X1)               0.03       8.98 f
+  mult0/result9_full_adder_4/s (full_adder_162)           0.00       8.98 f
+  mult0/result9_full_adder_5/b (full_adder_161)           0.00       8.98 f
+  mult0/result9_full_adder_5/U3/Y (XNOR2X1)               0.04       9.02 r
+  mult0/result9_full_adder_5/U1/Y (MUX2X1)                0.06       9.08 r
+  mult0/result9_full_adder_5/s (full_adder_161)           0.00       9.08 r
+  mult0/result9_full_adder_6/a (full_adder_160)           0.00       9.08 r
+  mult0/result9_full_adder_6/U7/Y (OAI21X1)               0.03       9.10 f
+  mult0/result9_full_adder_6/U5/Y (NAND2X1)               0.05       9.15 r
+  mult0/result9_full_adder_6/cout (full_adder_160)        0.00       9.15 r
+  mult0/result10_full_adder_1/cin (full_adder_159)        0.00       9.15 r
+  mult0/result10_full_adder_1/U1/Y (XOR2X1)               0.06       9.21 r
+  mult0/result10_full_adder_1/s (full_adder_159)          0.00       9.21 r
+  mult0/result10_full_adder_2/b (full_adder_158)          0.00       9.21 r
+  mult0/result10_full_adder_2/U13/Y (XNOR2X1)             0.05       9.25 r
+  mult0/result10_full_adder_2/U12/Y (INVX1)               0.02       9.28 f
+  mult0/result10_full_adder_2/U11/Y (NAND2X1)             0.01       9.29 r
+  mult0/result10_full_adder_2/U9/Y (NAND2X1)              0.02       9.31 f
+  mult0/result10_full_adder_2/s (full_adder_158)          0.00       9.31 f
+  mult0/result10_full_adder_3/b (full_adder_157)          0.00       9.31 f
+  mult0/result10_full_adder_3/U3/Y (XNOR2X1)              0.04       9.36 r
+  mult0/result10_full_adder_3/U1/Y (MUX2X1)               0.06       9.42 r
+  mult0/result10_full_adder_3/s (full_adder_157)          0.00       9.42 r
+  mult0/result10_full_adder_4/b (full_adder_156)          0.00       9.42 r
+  mult0/result10_full_adder_4/U2/Y (XNOR2X1)              0.05       9.47 r
+  mult0/result10_full_adder_4/U1/Y (MUX2X1)               0.06       9.53 r
+  mult0/result10_full_adder_4/s (full_adder_156)          0.00       9.53 r
+  mult0/result10_full_adder_5/a (full_adder_155)          0.00       9.53 r
+  mult0/result10_full_adder_5/U7/Y (OAI21X1)              0.03       9.55 f
+  mult0/result10_full_adder_5/U5/Y (NAND2X1)              0.04       9.59 r
+  mult0/result10_full_adder_5/cout (full_adder_155)       0.00       9.59 r
+  mult0/result11_full_adder_1/cin (full_adder_154)        0.00       9.59 r
+  mult0/result11_full_adder_1/U1/Y (XOR2X1)               0.05       9.64 r
+  mult0/result11_full_adder_1/s (full_adder_154)          0.00       9.64 r
+  mult0/result11_full_adder_2/b (full_adder_153)          0.00       9.64 r
+  mult0/result11_full_adder_2/U9/Y (XNOR2X1)              0.05       9.69 r
+  mult0/result11_full_adder_2/U8/Y (MUX2X1)               0.06       9.75 r
+  mult0/result11_full_adder_2/s (full_adder_153)          0.00       9.75 r
+  mult0/result11_full_adder_3/b (full_adder_152)          0.00       9.75 r
+  mult0/result11_full_adder_3/U1/Y (XNOR2X1)              0.05       9.81 r
+  mult0/result11_full_adder_3/s (full_adder_152)          0.00       9.81 r
+  mult0/result11_full_adder_4/a (full_adder_151)          0.00       9.81 r
+  mult0/result11_full_adder_4/U7/Y (OAI21X1)              0.03       9.83 f
+  mult0/result11_full_adder_4/U5/Y (NAND2X1)              0.04       9.87 r
+  mult0/result11_full_adder_4/cout (full_adder_151)       0.00       9.87 r
+  mult0/result12_full_adder_1/cin (full_adder_150)        0.00       9.87 r
+  mult0/result12_full_adder_1/U1/Y (XNOR2X1)              0.05       9.92 r
+  mult0/result12_full_adder_1/s (full_adder_150)          0.00       9.92 r
+  mult0/result12_full_adder_2/b (full_adder_149)          0.00       9.92 r
+  mult0/result12_full_adder_2/U2/Y (XNOR2X1)              0.05       9.97 r
+  mult0/result12_full_adder_2/U1/Y (INVX1)                0.02       9.99 f
+  mult0/result12_full_adder_2/U13/Y (NAND2X1)             0.01      10.01 r
+  mult0/result12_full_adder_2/U11/Y (NAND2X1)             0.02      10.03 f
+  mult0/result12_full_adder_2/s (full_adder_149)          0.00      10.03 f
+  mult0/result12_full_adder_3/a (full_adder_148)          0.00      10.03 f
+  mult0/result12_full_adder_3/U2/Y (OAI21X1)              0.04      10.07 r
+  mult0/result12_full_adder_3/U5/Y (NAND2X1)              0.03      10.10 f
+  mult0/result12_full_adder_3/cout (full_adder_148)       0.00      10.10 f
+  mult0/result13_full_adder_1/cin (full_adder_147)        0.00      10.10 f
+  mult0/result13_full_adder_1/U4/Y (XNOR2X1)              0.05      10.16 r
+  mult0/result13_full_adder_1/s (full_adder_147)          0.00      10.16 r
+  mult0/result13_full_adder_2/a (full_adder_146)          0.00      10.16 r
+  mult0/result13_full_adder_2/U7/Y (OAI21X1)              0.03      10.18 f
+  mult0/result13_full_adder_2/U5/Y (NAND2X1)              0.04      10.22 r
+  mult0/result13_full_adder_2/cout (full_adder_146)       0.00      10.22 r
+  mult0/result14_full_adder_1/b (full_adder_145)          0.00      10.22 r
+  mult0/result14_full_adder_1/U3/Y (XOR2X1)               0.05      10.27 r
+  mult0/result14_full_adder_1/U2/Y (MUX2X1)               0.04      10.31 f
+  mult0/result14_full_adder_1/s (full_adder_145)          0.00      10.31 f
+  mult0/result[14] (wallace_8bit_0)                       0.00      10.31 f
+  DP_OP_9_122_5775/I1[14] (wallaceTree_16bit_comb_DP_OP_9_122_5775_1)
+                                                          0.00      10.31 f
+  DP_OP_9_122_5775/U428/Y (OR2X2)                         0.04      10.35 f
+  DP_OP_9_122_5775/U224/Y (AOI21X1)                       0.03      10.38 r
+  DP_OP_9_122_5775/U356/Y (INVX1)                         0.02      10.41 f
+  DP_OP_9_122_5775/U359/Y (AOI21X1)                       0.03      10.44 r
+  DP_OP_9_122_5775/U227/Y (INVX1)                         0.02      10.46 f
+  DP_OP_9_122_5775/U236/Y (AND2X2)                        0.03      10.50 f
+  DP_OP_9_122_5775/U231/Y (AOI21X1)                       0.04      10.53 r
+  DP_OP_9_122_5775/U391/Y (INVX1)                         0.02      10.55 f
+  DP_OP_9_122_5775/U381/Y (INVX1)                         0.01      10.57 r
+  DP_OP_9_122_5775/U5/Y (OAI21X1)                         0.02      10.59 f
+  DP_OP_9_122_5775/U384/Y (XNOR2X1)                       0.06      10.65 r
+  DP_OP_9_122_5775/U430/Y (INVX8)                         0.07      10.72 f
+  DP_OP_9_122_5775/O1[31] (wallaceTree_16bit_comb_DP_OP_9_122_5775_1)
+                                                          0.00      10.72 f
+  result[31] (out)                                        0.00      10.72 f
+  data arrival time                                                 10.72
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                -10.72
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -3.60
+
+
+1

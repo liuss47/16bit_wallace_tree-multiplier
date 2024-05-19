@@ -1,0 +1,14 @@
+*design* DebussyLib (btIdent Verdi_T-2022.06-SP2)
+Command arguments:
+    +define+verilog
+    -f filelist_sim.f
+        /home/summer/Desktop/Project/wallaceTree_16bit_comb/src/FA.v
+        /home/summer/Desktop/Project/wallaceTree_16bit_comb/src/HA.v
+        /home/summer/Desktop/Project/wallaceTree_16bit_comb/src/wallace_16b.v
+        /home/summer/Desktop/Project/wallaceTree_16bit_comb/src/wallace_8bit.v
+        /home/summer/Desktop/Project/wallaceTree_16bit_comb/sim/testbench.v
+
+Highest level modules:
+testbench
+
+Total	0 error(s),   0 warning(s)

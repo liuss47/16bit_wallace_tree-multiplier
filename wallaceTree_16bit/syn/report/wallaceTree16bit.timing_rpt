@@ -1,0 +1,2345 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1000
+Design : wallaceTree16bit
+Version: U-2022.12-SP1
+Date   : Sat May 18 07:19:13 2024
+****************************************
+
+Operating Conditions: typical   Library: gscl45nm
+Wire Load Model Mode: top
+
+  Startpoint: input_b[14]
+              (input port clocked by clk)
+  Endpoint: result[30] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[14] (in)                                        0.00       5.70 r
+  C493/Y (AND2X1)                                         0.06       5.76 r
+  fa40/x (full_adder_160)                                 0.00       5.76 r
+  fa40/U3/Y (INVX1)                                       0.03       5.78 f
+  fa40/U2/Y (MUX2X1)                                      0.05       5.84 r
+  fa40/U1/Y (MUX2X1)                                      0.07       5.91 r
+  fa40/s (full_adder_160)                                 0.00       5.91 r
+  fa97/y (full_adder_103)                                 0.00       5.91 r
+  fa97/U6/Y (AND2X1)                                      0.03       5.93 r
+  fa97/U8/Y (INVX1)                                       0.02       5.95 f
+  fa97/U5/Y (NAND2X1)                                     0.01       5.96 r
+  fa97/c (full_adder_103)                                 0.00       5.96 r
+  fa136/x (full_adder_64)                                 0.00       5.96 r
+  fa136/U8/Y (BUFX2)                                      0.04       6.00 r
+  fa136/U3/Y (INVX1)                                      0.02       6.02 f
+  fa136/U2/Y (MUX2X1)                                     0.05       6.08 r
+  fa136/U1/Y (MUX2X1)                                     0.07       6.15 r
+  fa136/s (full_adder_64)                                 0.00       6.15 r
+  fa154/cin (full_adder_46)                               0.00       6.15 r
+  fa154/U2/Y (MUX2X1)                                     0.06       6.20 r
+  fa154/U1/Y (MUX2X1)                                     0.06       6.26 r
+  fa154/s (full_adder_46)                                 0.00       6.26 r
+  fa181/x (full_adder_19)                                 0.00       6.26 r
+  fa181/U3/Y (INVX1)                                      0.03       6.29 f
+  fa181/U2/Y (MUX2X1)                                     0.05       6.34 r
+  fa181/U1/Y (MUX2X1)                                     0.06       6.40 r
+  fa181/s (full_adder_19)                                 0.00       6.40 r
+  fa191/x (full_adder_9)                                  0.00       6.40 r
+  fa191/U3/Y (INVX1)                                      0.03       6.43 f
+  fa191/U2/Y (MUX2X1)                                     0.05       6.48 r
+  fa191/U1/Y (MUX2X1)                                     0.06       6.54 r
+  fa191/s (full_adder_9)                                  0.00       6.54 r
+  car/A[21] (carry_lookahead_adder32)                     0.00       6.54 r
+  car/CLA5/x[1] (four_bit_cla_3)                          0.00       6.54 r
+  car/CLA5/cla1/a (bit_cla_11)                            0.00       6.54 r
+  car/CLA5/cla1/U3/Y (MUX2X1)                             0.07       6.61 r
+  car/CLA5/cla1/p (bit_cla_11)                            0.00       6.61 r
+  car/CLA5/U6/Y (AND2X1)                                  0.05       6.66 r
+  car/CLA5/U7/Y (AOI22X1)                                 0.02       6.69 f
+  car/CLA5/U3/Y (OAI21X1)                                 0.05       6.73 r
+  car/CLA5/gOut (four_bit_cla_3)                          0.00       6.73 r
+  car/U14/Y (INVX1)                                       0.02       6.75 f
+  car/U15/Y (NAND2X1)                                     0.02       6.78 r
+  car/U13/Y (INVX1)                                       0.03       6.80 f
+  car/U10/Y (OAI21X1)                                     0.06       6.86 r
+  car/CLA7/cin (four_bit_cla_1)                           0.00       6.86 r
+  car/CLA7/U13/Y (AOI21X1)                                0.04       6.90 f
+  car/CLA7/U19/Y (INVX1)                                  0.02       6.91 r
+  car/CLA7/U11/Y (AOI21X1)                                0.01       6.92 f
+  car/CLA7/U10/Y (INVX1)                                  0.01       6.93 r
+  car/CLA7/U4/Y (INVX1)                                   0.01       6.94 f
+  car/CLA7/U12/Y (INVX1)                                  0.01       6.95 r
+  car/CLA7/cla2/c (bit_cla_2)                             0.00       6.95 r
+  car/CLA7/cla2/U1/Y (MUX2X1)                             0.04       6.99 r
+  car/CLA7/cla2/s (bit_cla_2)                             0.00       6.99 r
+  car/CLA7/s[2] (four_bit_cla_1)                          0.00       6.99 r
+  car/Sum[30] (carry_lookahead_adder32)                   0.00       6.99 r
+  U2/Y (INVX1)                                            0.04       7.03 f
+  U80/Y (INVX8)                                           0.09       7.12 r
+  result[30] (out)                                        0.00       7.12 r
+  data arrival time                                                  7.12
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.12
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: input_b[14]
+              (input port clocked by clk)
+  Endpoint: result[31] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[14] (in)                                        0.00       5.70 r
+  C493/Y (AND2X1)                                         0.06       5.76 r
+  fa40/x (full_adder_160)                                 0.00       5.76 r
+  fa40/U3/Y (INVX1)                                       0.03       5.78 f
+  fa40/U2/Y (MUX2X1)                                      0.05       5.84 r
+  fa40/U1/Y (MUX2X1)                                      0.07       5.91 r
+  fa40/s (full_adder_160)                                 0.00       5.91 r
+  fa97/y (full_adder_103)                                 0.00       5.91 r
+  fa97/U6/Y (AND2X1)                                      0.03       5.93 r
+  fa97/U8/Y (INVX1)                                       0.02       5.95 f
+  fa97/U5/Y (NAND2X1)                                     0.01       5.96 r
+  fa97/c (full_adder_103)                                 0.00       5.96 r
+  fa136/x (full_adder_64)                                 0.00       5.96 r
+  fa136/U8/Y (BUFX2)                                      0.04       6.00 r
+  fa136/U3/Y (INVX1)                                      0.02       6.02 f
+  fa136/U2/Y (MUX2X1)                                     0.05       6.08 r
+  fa136/U1/Y (MUX2X1)                                     0.07       6.15 r
+  fa136/s (full_adder_64)                                 0.00       6.15 r
+  fa154/cin (full_adder_46)                               0.00       6.15 r
+  fa154/U2/Y (MUX2X1)                                     0.06       6.20 r
+  fa154/U1/Y (MUX2X1)                                     0.06       6.26 r
+  fa154/s (full_adder_46)                                 0.00       6.26 r
+  fa181/x (full_adder_19)                                 0.00       6.26 r
+  fa181/U3/Y (INVX1)                                      0.03       6.29 f
+  fa181/U2/Y (MUX2X1)                                     0.05       6.34 r
+  fa181/U1/Y (MUX2X1)                                     0.06       6.40 r
+  fa181/s (full_adder_19)                                 0.00       6.40 r
+  fa191/x (full_adder_9)                                  0.00       6.40 r
+  fa191/U3/Y (INVX1)                                      0.03       6.43 f
+  fa191/U2/Y (MUX2X1)                                     0.05       6.48 r
+  fa191/U1/Y (MUX2X1)                                     0.06       6.54 r
+  fa191/s (full_adder_9)                                  0.00       6.54 r
+  car/A[21] (carry_lookahead_adder32)                     0.00       6.54 r
+  car/CLA5/x[1] (four_bit_cla_3)                          0.00       6.54 r
+  car/CLA5/cla1/a (bit_cla_11)                            0.00       6.54 r
+  car/CLA5/cla1/U3/Y (MUX2X1)                             0.07       6.61 r
+  car/CLA5/cla1/p (bit_cla_11)                            0.00       6.61 r
+  car/CLA5/U6/Y (AND2X1)                                  0.05       6.66 r
+  car/CLA5/U7/Y (AOI22X1)                                 0.02       6.69 f
+  car/CLA5/U3/Y (OAI21X1)                                 0.05       6.73 r
+  car/CLA5/gOut (four_bit_cla_3)                          0.00       6.73 r
+  car/U14/Y (INVX1)                                       0.02       6.75 f
+  car/U15/Y (NAND2X1)                                     0.02       6.78 r
+  car/U13/Y (INVX1)                                       0.03       6.80 f
+  car/U10/Y (OAI21X1)                                     0.06       6.86 r
+  car/CLA7/cin (four_bit_cla_1)                           0.00       6.86 r
+  car/CLA7/U13/Y (AOI21X1)                                0.04       6.90 f
+  car/CLA7/U19/Y (INVX1)                                  0.02       6.91 r
+  car/CLA7/U11/Y (AOI21X1)                                0.01       6.92 f
+  car/CLA7/U10/Y (INVX1)                                  0.01       6.93 r
+  car/CLA7/U9/Y (AOI21X1)                                 0.02       6.95 f
+  car/CLA7/U8/Y (INVX1)                                   0.01       6.96 r
+  car/CLA7/cla3/c (bit_cla_1)                             0.00       6.96 r
+  car/CLA7/cla3/U1/Y (MUX2X1)                             0.04       7.00 r
+  car/CLA7/cla3/s (bit_cla_1)                             0.00       7.00 r
+  car/CLA7/s[3] (four_bit_cla_1)                          0.00       7.00 r
+  car/Sum[31] (carry_lookahead_adder32)                   0.00       7.00 r
+  U81/Y (INVX2)                                           0.03       7.03 f
+  U82/Y (INVX8)                                           0.09       7.12 r
+  result[31] (out)                                        0.00       7.12 r
+  data arrival time                                                  7.12
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.12
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: input_b[6] (input port clocked by clk)
+  Endpoint: result[13] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[6] (in)                                         0.00       5.70 r
+  C362/Y (AND2X1)                                         0.06       5.76 r
+  fa18/x (full_adder_182)                                 0.00       5.76 r
+  fa18/U3/Y (INVX1)                                       0.03       5.78 f
+  fa18/U2/Y (MUX2X1)                                      0.05       5.84 r
+  fa18/U1/Y (MUX2X1)                                      0.07       5.91 r
+  fa18/s (full_adder_182)                                 0.00       5.91 r
+  fa76/cin (full_adder_124)                               0.00       5.91 r
+  fa76/U9/Y (XOR2X1)                                      0.05       5.95 r
+  fa76/U1/Y (MUX2X1)                                      0.06       6.01 r
+  fa76/s (full_adder_124)                                 0.00       6.01 r
+  fa117/x (full_adder_83)                                 0.00       6.01 r
+  fa117/U3/Y (INVX1)                                      0.03       6.04 f
+  fa117/U11/Y (AOI21X1)                                   0.03       6.07 r
+  fa117/U8/Y (BUFX2)                                      0.04       6.11 r
+  fa117/U10/Y (MUX2X1)                                    0.05       6.17 r
+  fa117/s (full_adder_83)                                 0.00       6.17 r
+  fa142/x (full_adder_58)                                 0.00       6.17 r
+  fa142/U3/Y (INVX1)                                      0.03       6.20 f
+  fa142/U2/Y (MUX2X1)                                     0.05       6.25 r
+  fa142/U1/Y (MUX2X1)                                     0.06       6.31 r
+  fa142/s (full_adder_58)                                 0.00       6.31 r
+  ha37/x (half_adder_15)                                  0.00       6.31 r
+  ha37/U3/Y (AND2X2)                                      0.04       6.35 r
+  ha37/c (half_adder_15)                                  0.00       6.35 r
+  ha46/y (half_adder_6)                                   0.00       6.35 r
+  ha46/U2/Y (INVX1)                                       0.02       6.37 f
+  ha46/U1/Y (MUX2X1)                                      0.06       6.43 r
+  ha46/s (half_adder_6)                                   0.00       6.43 r
+  car/A[10] (carry_lookahead_adder32)                     0.00       6.43 r
+  car/CLA2/x[2] (four_bit_cla_6)                          0.00       6.43 r
+  car/CLA2/cla2/a (bit_cla_22)                            0.00       6.43 r
+  car/CLA2/cla2/U3/Y (MUX2X1)                             0.08       6.50 r
+  car/CLA2/cla2/p (bit_cla_22)                            0.00       6.50 r
+  car/CLA2/U3/Y (AND2X2)                                  0.04       6.55 r
+  car/CLA2/U6/Y (AOI22X1)                                 0.02       6.56 f
+  car/CLA2/U7/Y (OAI21X1)                                 0.04       6.61 r
+  car/CLA2/gOut (four_bit_cla_6)                          0.00       6.61 r
+  car/U22/Y (INVX1)                                       0.02       6.63 f
+  car/U20/Y (OAI21X1)                                     0.02       6.66 r
+  car/U18/Y (BUFX2)                                       0.04       6.70 r
+  car/CLA3/cin (four_bit_cla_5)                           0.00       6.70 r
+  car/CLA3/U13/Y (AOI21X1)                                0.03       6.72 f
+  car/CLA3/U12/Y (INVX1)                                  0.02       6.74 r
+  car/CLA3/cla1/c (bit_cla_19)                            0.00       6.74 r
+  car/CLA3/cla1/U7/Y (NAND2X1)                            0.01       6.76 f
+  car/CLA3/cla1/U6/Y (OAI21X1)                            0.02       6.78 r
+  car/CLA3/cla1/U5/Y (INVX1)                              0.02       6.80 f
+  car/CLA3/cla1/U1/Y (INVX2)                              0.32       7.12 r
+  car/CLA3/cla1/s (bit_cla_19)                            0.00       7.12 r
+  car/CLA3/s[1] (four_bit_cla_5)                          0.00       7.12 r
+  car/Sum[13] (carry_lookahead_adder32)                   0.00       7.12 r
+  result[13] (out)                                        0.00       7.12 r
+  data arrival time                                                  7.12
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.12
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: input_b[15]
+              (input port clocked by clk)
+  Endpoint: result[27] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 f
+  input_b[15] (in)                                        0.00       5.70 f
+  U9/Y (AND2X1)                                           0.05       5.75 f
+  fa13/x (full_adder_187)                                 0.00       5.75 f
+  fa13/U3/Y (INVX1)                                       0.01       5.76 r
+  fa13/U2/Y (AND2X1)                                      0.03       5.78 r
+  fa13/U9/Y (INVX1)                                       0.02       5.80 f
+  fa13/U12/Y (NAND2X1)                                    0.02       5.83 r
+  fa13/U14/Y (INVX1)                                      0.03       5.85 f
+  fa13/U1/Y (MUX2X1)                                      0.04       5.89 f
+  fa13/s (full_adder_187)                                 0.00       5.89 f
+  fa82/x (full_adder_118)                                 0.00       5.89 f
+  fa82/U16/Y (INVX1)                                      0.00       5.89 r
+  fa82/U6/Y (AND2X2)                                      0.03       5.93 r
+  fa82/U8/Y (INVX1)                                       0.01       5.94 f
+  fa82/U13/Y (NAND2X1)                                    0.02       5.96 r
+  fa82/U15/Y (INVX1)                                      0.03       5.99 f
+  fa82/U11/Y (OAI21X1)                                    0.06       6.05 r
+  fa82/s (full_adder_118)                                 0.00       6.05 r
+  fa123/x (full_adder_77)                                 0.00       6.05 r
+  fa123/U8/Y (XOR2X1)                                     0.05       6.10 r
+  fa123/U1/Y (MUX2X1)                                     0.06       6.16 r
+  fa123/s (full_adder_77)                                 0.00       6.16 r
+  fa148/x (full_adder_52)                                 0.00       6.16 r
+  fa148/U6/Y (XNOR2X1)                                    0.06       6.22 r
+  fa148/U3/Y (MUX2X1)                                     0.06       6.28 r
+  fa148/s (full_adder_52)                                 0.00       6.28 r
+  fa175/x (full_adder_25)                                 0.00       6.28 r
+  fa175/U4/Y (XNOR2X1)                                    0.04       6.32 f
+  fa175/U9/Y (NAND2X1)                                    0.02       6.34 r
+  fa175/U8/Y (OAI21X1)                                    0.03       6.36 f
+  fa175/s (full_adder_25)                                 0.00       6.36 f
+  fa185/x (full_adder_15)                                 0.00       6.36 f
+  fa185/U2/Y (OR2X1)                                      0.04       6.40 f
+  fa185/U9/Y (NAND2X1)                                    0.02       6.43 r
+  fa185/U10/Y (INVX1)                                     0.02       6.45 f
+  fa185/U1/Y (MUX2X1)                                     0.06       6.51 r
+  fa185/s (full_adder_15)                                 0.00       6.51 r
+  car/A[15] (carry_lookahead_adder32)                     0.00       6.51 r
+  car/CLA3/x[3] (four_bit_cla_5)                          0.00       6.51 r
+  car/CLA3/cla3/a (bit_cla_17)                            0.00       6.51 r
+  car/CLA3/cla3/U8/Y (OAI21X1)                            0.04       6.55 f
+  car/CLA3/cla3/p (bit_cla_17)                            0.00       6.55 f
+  car/CLA3/U11/Y (NAND3X1)                                0.03       6.58 r
+  car/CLA3/U15/Y (INVX1)                                  0.02       6.61 f
+  car/CLA3/pOut (four_bit_cla_5)                          0.00       6.61 f
+  car/U19/Y (AOI21X1)                                     0.03       6.63 r
+  car/U17/Y (INVX1)                                       0.03       6.67 f
+  car/U9/Y (AOI21X1)                                      0.03       6.70 r
+  car/U8/Y (INVX1)                                        0.02       6.72 f
+  car/U16/Y (NAND2X1)                                     0.01       6.74 r
+  car/U15/Y (NAND2X1)                                     0.02       6.75 f
+  car/U13/Y (INVX1)                                       0.01       6.77 r
+  car/U5/Y (INVX1)                                        0.02       6.79 f
+  car/CLA6/cin (four_bit_cla_2)                           0.00       6.79 f
+  car/CLA6/U13/Y (AOI21X1)                                0.03       6.82 r
+  car/CLA6/U15/Y (INVX1)                                  0.03       6.84 f
+  car/CLA6/U16/Y (AOI21X1)                                0.03       6.88 r
+  car/CLA6/U10/Y (INVX1)                                  0.03       6.90 f
+  car/CLA6/U9/Y (AOI21X1)                                 0.03       6.93 r
+  car/CLA6/U8/Y (INVX1)                                   0.02       6.96 f
+  car/CLA6/cla3/c (bit_cla_5)                             0.00       6.96 f
+  car/CLA6/cla3/U1/Y (MUX2X1)                             0.04       7.00 r
+  car/CLA6/cla3/s (bit_cla_5)                             0.00       7.00 r
+  car/CLA6/s[3] (four_bit_cla_2)                          0.00       7.00 r
+  car/Sum[27] (carry_lookahead_adder32)                   0.00       7.00 r
+  U13/Y (INVX2)                                           0.03       7.03 f
+  U79/Y (INVX8)                                           0.09       7.12 r
+  result[27] (out)                                        0.00       7.12 r
+  data arrival time                                                  7.12
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.12
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.01
+
+
+  Startpoint: input_b[14]
+              (input port clocked by clk)
+  Endpoint: result[29] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[14] (in)                                        0.00       5.70 r
+  C493/Y (AND2X1)                                         0.06       5.76 r
+  fa40/x (full_adder_160)                                 0.00       5.76 r
+  fa40/U3/Y (INVX1)                                       0.03       5.78 f
+  fa40/U2/Y (MUX2X1)                                      0.05       5.84 r
+  fa40/U1/Y (MUX2X1)                                      0.07       5.91 r
+  fa40/s (full_adder_160)                                 0.00       5.91 r
+  fa97/y (full_adder_103)                                 0.00       5.91 r
+  fa97/U6/Y (AND2X1)                                      0.03       5.93 r
+  fa97/U8/Y (INVX1)                                       0.02       5.95 f
+  fa97/U5/Y (NAND2X1)                                     0.01       5.96 r
+  fa97/c (full_adder_103)                                 0.00       5.96 r
+  fa136/x (full_adder_64)                                 0.00       5.96 r
+  fa136/U8/Y (BUFX2)                                      0.04       6.00 r
+  fa136/U3/Y (INVX1)                                      0.02       6.02 f
+  fa136/U2/Y (MUX2X1)                                     0.05       6.08 r
+  fa136/U1/Y (MUX2X1)                                     0.07       6.15 r
+  fa136/s (full_adder_64)                                 0.00       6.15 r
+  fa154/cin (full_adder_46)                               0.00       6.15 r
+  fa154/U2/Y (MUX2X1)                                     0.06       6.20 r
+  fa154/U1/Y (MUX2X1)                                     0.06       6.26 r
+  fa154/s (full_adder_46)                                 0.00       6.26 r
+  fa181/x (full_adder_19)                                 0.00       6.26 r
+  fa181/U3/Y (INVX1)                                      0.03       6.29 f
+  fa181/U2/Y (MUX2X1)                                     0.05       6.34 r
+  fa181/U1/Y (MUX2X1)                                     0.06       6.40 r
+  fa181/s (full_adder_19)                                 0.00       6.40 r
+  fa191/x (full_adder_9)                                  0.00       6.40 r
+  fa191/U3/Y (INVX1)                                      0.03       6.43 f
+  fa191/U2/Y (MUX2X1)                                     0.05       6.48 r
+  fa191/U1/Y (MUX2X1)                                     0.06       6.54 r
+  fa191/s (full_adder_9)                                  0.00       6.54 r
+  car/A[21] (carry_lookahead_adder32)                     0.00       6.54 r
+  car/CLA5/x[1] (four_bit_cla_3)                          0.00       6.54 r
+  car/CLA5/cla1/a (bit_cla_11)                            0.00       6.54 r
+  car/CLA5/cla1/U3/Y (MUX2X1)                             0.07       6.61 r
+  car/CLA5/cla1/p (bit_cla_11)                            0.00       6.61 r
+  car/CLA5/U6/Y (AND2X1)                                  0.05       6.66 r
+  car/CLA5/U7/Y (AOI22X1)                                 0.02       6.69 f
+  car/CLA5/U3/Y (OAI21X1)                                 0.05       6.73 r
+  car/CLA5/gOut (four_bit_cla_3)                          0.00       6.73 r
+  car/U14/Y (INVX1)                                       0.02       6.75 f
+  car/U15/Y (NAND2X1)                                     0.02       6.78 r
+  car/U13/Y (INVX1)                                       0.03       6.80 f
+  car/U10/Y (OAI21X1)                                     0.06       6.86 r
+  car/CLA7/cin (four_bit_cla_1)                           0.00       6.86 r
+  car/CLA7/U13/Y (AOI21X1)                                0.04       6.90 f
+  car/CLA7/U19/Y (INVX1)                                  0.02       6.91 r
+  car/CLA7/cla1/c (bit_cla_3)                             0.00       6.91 r
+  car/CLA7/cla1/U1/Y (AND2X1)                             0.04       6.96 r
+  car/CLA7/cla1/U9/Y (AOI21X1)                            0.02       6.97 f
+  car/CLA7/cla1/U6/Y (BUFX2)                              0.04       7.02 f
+  car/CLA7/cla1/U7/Y (INVX8)                              0.08       7.10 r
+  car/CLA7/cla1/s (bit_cla_3)                             0.00       7.10 r
+  car/CLA7/s[1] (four_bit_cla_1)                          0.00       7.10 r
+  car/Sum[29] (carry_lookahead_adder32)                   0.00       7.10 r
+  result[29] (out)                                        0.00       7.10 r
+  data arrival time                                                  7.10
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.10
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.03
+
+
+  Startpoint: input_b[15]
+              (input port clocked by clk)
+  Endpoint: result[23] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 f
+  input_b[15] (in)                                        0.00       5.70 f
+  U9/Y (AND2X1)                                           0.05       5.75 f
+  fa13/x (full_adder_187)                                 0.00       5.75 f
+  fa13/U3/Y (INVX1)                                       0.01       5.76 r
+  fa13/U2/Y (AND2X1)                                      0.03       5.78 r
+  fa13/U9/Y (INVX1)                                       0.02       5.80 f
+  fa13/U12/Y (NAND2X1)                                    0.02       5.83 r
+  fa13/U14/Y (INVX1)                                      0.03       5.85 f
+  fa13/U1/Y (MUX2X1)                                      0.04       5.89 f
+  fa13/s (full_adder_187)                                 0.00       5.89 f
+  fa82/x (full_adder_118)                                 0.00       5.89 f
+  fa82/U16/Y (INVX1)                                      0.00       5.89 r
+  fa82/U6/Y (AND2X2)                                      0.03       5.93 r
+  fa82/U8/Y (INVX1)                                       0.01       5.94 f
+  fa82/U13/Y (NAND2X1)                                    0.02       5.96 r
+  fa82/U15/Y (INVX1)                                      0.03       5.99 f
+  fa82/U11/Y (OAI21X1)                                    0.06       6.05 r
+  fa82/s (full_adder_118)                                 0.00       6.05 r
+  fa123/x (full_adder_77)                                 0.00       6.05 r
+  fa123/U8/Y (XOR2X1)                                     0.05       6.10 r
+  fa123/U1/Y (MUX2X1)                                     0.06       6.16 r
+  fa123/s (full_adder_77)                                 0.00       6.16 r
+  fa148/x (full_adder_52)                                 0.00       6.16 r
+  fa148/U6/Y (XNOR2X1)                                    0.06       6.22 r
+  fa148/U3/Y (MUX2X1)                                     0.06       6.28 r
+  fa148/s (full_adder_52)                                 0.00       6.28 r
+  fa175/x (full_adder_25)                                 0.00       6.28 r
+  fa175/U4/Y (XNOR2X1)                                    0.04       6.32 f
+  fa175/U9/Y (NAND2X1)                                    0.02       6.34 r
+  fa175/U8/Y (OAI21X1)                                    0.03       6.36 f
+  fa175/s (full_adder_25)                                 0.00       6.36 f
+  fa185/x (full_adder_15)                                 0.00       6.36 f
+  fa185/U2/Y (OR2X1)                                      0.04       6.40 f
+  fa185/U9/Y (NAND2X1)                                    0.02       6.43 r
+  fa185/U10/Y (INVX1)                                     0.02       6.45 f
+  fa185/U1/Y (MUX2X1)                                     0.06       6.51 r
+  fa185/s (full_adder_15)                                 0.00       6.51 r
+  car/A[15] (carry_lookahead_adder32)                     0.00       6.51 r
+  car/CLA3/x[3] (four_bit_cla_5)                          0.00       6.51 r
+  car/CLA3/cla3/a (bit_cla_17)                            0.00       6.51 r
+  car/CLA3/cla3/U8/Y (OAI21X1)                            0.04       6.55 f
+  car/CLA3/cla3/p (bit_cla_17)                            0.00       6.55 f
+  car/CLA3/U11/Y (NAND3X1)                                0.03       6.58 r
+  car/CLA3/U15/Y (INVX1)                                  0.02       6.61 f
+  car/CLA3/pOut (four_bit_cla_5)                          0.00       6.61 f
+  car/U19/Y (AOI21X1)                                     0.03       6.63 r
+  car/U17/Y (INVX1)                                       0.03       6.67 f
+  car/U9/Y (AOI21X1)                                      0.03       6.70 r
+  car/U8/Y (INVX1)                                        0.02       6.72 f
+  car/U4/Y (BUFX2)                                        0.04       6.76 f
+  car/CLA5/cin (four_bit_cla_3)                           0.00       6.76 f
+  car/CLA5/U13/Y (AOI21X1)                                0.03       6.79 r
+  car/CLA5/U12/Y (INVX1)                                  0.03       6.81 f
+  car/CLA5/U15/Y (NAND2X1)                                0.01       6.83 r
+  car/CLA5/U10/Y (AND2X2)                                 0.03       6.86 r
+  car/CLA5/U14/Y (INVX1)                                  0.02       6.88 f
+  car/CLA5/U9/Y (AOI21X1)                                 0.03       6.92 r
+  car/CLA5/U8/Y (INVX1)                                   0.02       6.94 f
+  car/CLA5/cla3/c (bit_cla_9)                             0.00       6.94 f
+  car/CLA5/cla3/U9/Y (AND2X1)                             0.03       6.97 f
+  car/CLA5/cla3/U10/Y (AOI21X1)                           0.02       6.99 r
+  car/CLA5/cla3/U7/Y (INVX1)                              0.02       7.01 f
+  car/CLA5/cla3/U8/Y (INVX1)                              0.03       7.03 r
+  car/CLA5/cla3/U1/Y (INVX8)                              0.06       7.09 f
+  car/CLA5/cla3/s (bit_cla_9)                             0.00       7.09 f
+  car/CLA5/s[3] (four_bit_cla_3)                          0.00       7.09 f
+  car/Sum[23] (carry_lookahead_adder32)                   0.00       7.09 f
+  result[23] (out)                                        0.00       7.09 f
+  data arrival time                                                  7.09
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.09
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.03
+
+
+  Startpoint: input_b[15]
+              (input port clocked by clk)
+  Endpoint: result[16] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 f
+  input_b[15] (in)                                        0.00       5.70 f
+  U9/Y (AND2X1)                                           0.05       5.75 f
+  fa13/x (full_adder_187)                                 0.00       5.75 f
+  fa13/U3/Y (INVX1)                                       0.01       5.76 r
+  fa13/U2/Y (AND2X1)                                      0.03       5.78 r
+  fa13/U9/Y (INVX1)                                       0.02       5.80 f
+  fa13/U12/Y (NAND2X1)                                    0.02       5.83 r
+  fa13/U14/Y (INVX1)                                      0.03       5.85 f
+  fa13/U1/Y (MUX2X1)                                      0.04       5.89 f
+  fa13/s (full_adder_187)                                 0.00       5.89 f
+  fa82/x (full_adder_118)                                 0.00       5.89 f
+  fa82/U16/Y (INVX1)                                      0.00       5.89 r
+  fa82/U6/Y (AND2X2)                                      0.03       5.93 r
+  fa82/U8/Y (INVX1)                                       0.01       5.94 f
+  fa82/U13/Y (NAND2X1)                                    0.02       5.96 r
+  fa82/U15/Y (INVX1)                                      0.03       5.99 f
+  fa82/U11/Y (OAI21X1)                                    0.06       6.05 r
+  fa82/s (full_adder_118)                                 0.00       6.05 r
+  fa123/x (full_adder_77)                                 0.00       6.05 r
+  fa123/U8/Y (XOR2X1)                                     0.05       6.10 r
+  fa123/U1/Y (MUX2X1)                                     0.06       6.16 r
+  fa123/s (full_adder_77)                                 0.00       6.16 r
+  fa148/x (full_adder_52)                                 0.00       6.16 r
+  fa148/U6/Y (XNOR2X1)                                    0.06       6.22 r
+  fa148/U3/Y (MUX2X1)                                     0.06       6.28 r
+  fa148/s (full_adder_52)                                 0.00       6.28 r
+  fa175/x (full_adder_25)                                 0.00       6.28 r
+  fa175/U4/Y (XNOR2X1)                                    0.04       6.32 f
+  fa175/U9/Y (NAND2X1)                                    0.02       6.34 r
+  fa175/U8/Y (OAI21X1)                                    0.03       6.36 f
+  fa175/s (full_adder_25)                                 0.00       6.36 f
+  fa185/x (full_adder_15)                                 0.00       6.36 f
+  fa185/U2/Y (OR2X1)                                      0.04       6.40 f
+  fa185/U9/Y (NAND2X1)                                    0.02       6.43 r
+  fa185/U10/Y (INVX1)                                     0.02       6.45 f
+  fa185/U1/Y (MUX2X1)                                     0.06       6.51 r
+  fa185/s (full_adder_15)                                 0.00       6.51 r
+  car/A[15] (carry_lookahead_adder32)                     0.00       6.51 r
+  car/CLA3/x[3] (four_bit_cla_5)                          0.00       6.51 r
+  car/CLA3/cla3/a (bit_cla_17)                            0.00       6.51 r
+  car/CLA3/cla3/U9/Y (NAND2X1)                            0.03       6.54 f
+  car/CLA3/cla3/U8/Y (OAI21X1)                            0.05       6.59 r
+  car/CLA3/cla3/p (bit_cla_17)                            0.00       6.59 r
+  car/CLA3/U7/Y (INVX1)                                   0.04       6.62 f
+  car/CLA3/U3/Y (OAI21X1)                                 0.04       6.66 r
+  car/CLA3/gOut (four_bit_cla_5)                          0.00       6.66 r
+  car/U19/Y (AOI21X1)                                     0.02       6.68 f
+  car/U17/Y (INVX1)                                       0.02       6.71 r
+  car/CLA4/cin (four_bit_cla_4)                           0.00       6.71 r
+  car/CLA4/cla0/c (bit_cla_16)                            0.00       6.71 r
+  car/CLA4/cla0/U1/Y (MUX2X1)                             0.04       6.74 r
+  car/CLA4/cla0/U7/Y (INVX1)                              0.02       6.77 f
+  car/CLA4/cla0/U3/Y (INVX2)                              0.32       7.08 r
+  car/CLA4/cla0/s (bit_cla_16)                            0.00       7.08 r
+  car/CLA4/s[0] (four_bit_cla_4)                          0.00       7.08 r
+  car/Sum[16] (carry_lookahead_adder32)                   0.00       7.08 r
+  result[16] (out)                                        0.00       7.08 r
+  data arrival time                                                  7.08
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.08
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.04
+
+
+  Startpoint: input_b[14]
+              (input port clocked by clk)
+  Endpoint: result[28] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[14] (in)                                        0.00       5.70 r
+  C493/Y (AND2X1)                                         0.06       5.76 r
+  fa40/x (full_adder_160)                                 0.00       5.76 r
+  fa40/U3/Y (INVX1)                                       0.03       5.78 f
+  fa40/U2/Y (MUX2X1)                                      0.05       5.84 r
+  fa40/U1/Y (MUX2X1)                                      0.07       5.91 r
+  fa40/s (full_adder_160)                                 0.00       5.91 r
+  fa97/y (full_adder_103)                                 0.00       5.91 r
+  fa97/U6/Y (AND2X1)                                      0.03       5.93 r
+  fa97/U8/Y (INVX1)                                       0.02       5.95 f
+  fa97/U5/Y (NAND2X1)                                     0.01       5.96 r
+  fa97/c (full_adder_103)                                 0.00       5.96 r
+  fa136/x (full_adder_64)                                 0.00       5.96 r
+  fa136/U8/Y (BUFX2)                                      0.04       6.00 r
+  fa136/U3/Y (INVX1)                                      0.02       6.02 f
+  fa136/U2/Y (MUX2X1)                                     0.05       6.08 r
+  fa136/U1/Y (MUX2X1)                                     0.07       6.15 r
+  fa136/s (full_adder_64)                                 0.00       6.15 r
+  fa154/cin (full_adder_46)                               0.00       6.15 r
+  fa154/U2/Y (MUX2X1)                                     0.06       6.20 r
+  fa154/U1/Y (MUX2X1)                                     0.06       6.26 r
+  fa154/s (full_adder_46)                                 0.00       6.26 r
+  fa181/x (full_adder_19)                                 0.00       6.26 r
+  fa181/U3/Y (INVX1)                                      0.03       6.29 f
+  fa181/U2/Y (MUX2X1)                                     0.05       6.34 r
+  fa181/U1/Y (MUX2X1)                                     0.06       6.40 r
+  fa181/s (full_adder_19)                                 0.00       6.40 r
+  fa191/x (full_adder_9)                                  0.00       6.40 r
+  fa191/U3/Y (INVX1)                                      0.03       6.43 f
+  fa191/U2/Y (MUX2X1)                                     0.05       6.48 r
+  fa191/U1/Y (MUX2X1)                                     0.06       6.54 r
+  fa191/s (full_adder_9)                                  0.00       6.54 r
+  car/A[21] (carry_lookahead_adder32)                     0.00       6.54 r
+  car/CLA5/x[1] (four_bit_cla_3)                          0.00       6.54 r
+  car/CLA5/cla1/a (bit_cla_11)                            0.00       6.54 r
+  car/CLA5/cla1/U3/Y (MUX2X1)                             0.07       6.61 r
+  car/CLA5/cla1/p (bit_cla_11)                            0.00       6.61 r
+  car/CLA5/U6/Y (AND2X1)                                  0.05       6.66 r
+  car/CLA5/U7/Y (AOI22X1)                                 0.02       6.69 f
+  car/CLA5/U3/Y (OAI21X1)                                 0.05       6.73 r
+  car/CLA5/gOut (four_bit_cla_3)                          0.00       6.73 r
+  car/U14/Y (INVX1)                                       0.02       6.75 f
+  car/U15/Y (NAND2X1)                                     0.02       6.78 r
+  car/U13/Y (INVX1)                                       0.03       6.80 f
+  car/U10/Y (OAI21X1)                                     0.06       6.86 r
+  car/CLA7/cin (four_bit_cla_1)                           0.00       6.86 r
+  car/CLA7/U14/Y (INVX1)                                  0.03       6.89 f
+  car/CLA7/U15/Y (INVX1)                                  0.00       6.89 r
+  car/CLA7/cla0/c (bit_cla_4)                             0.00       6.89 r
+  car/CLA7/cla0/U1/Y (AND2X1)                             0.04       6.94 r
+  car/CLA7/cla0/U9/Y (AOI21X1)                            0.02       6.95 f
+  car/CLA7/cla0/U8/Y (BUFX2)                              0.04       7.00 f
+  car/CLA7/cla0/U2/Y (INVX8)                              0.08       7.08 r
+  car/CLA7/cla0/s (bit_cla_4)                             0.00       7.08 r
+  car/CLA7/s[0] (four_bit_cla_1)                          0.00       7.08 r
+  car/Sum[28] (carry_lookahead_adder32)                   0.00       7.08 r
+  result[28] (out)                                        0.00       7.08 r
+  data arrival time                                                  7.08
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.08
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.04
+
+
+  Startpoint: input_b[14]
+              (input port clocked by clk)
+  Endpoint: result[26] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[14] (in)                                        0.00       5.70 r
+  C493/Y (AND2X1)                                         0.06       5.76 r
+  fa40/x (full_adder_160)                                 0.00       5.76 r
+  fa40/U3/Y (INVX1)                                       0.03       5.78 f
+  fa40/U2/Y (MUX2X1)                                      0.05       5.84 r
+  fa40/U1/Y (MUX2X1)                                      0.07       5.91 r
+  fa40/s (full_adder_160)                                 0.00       5.91 r
+  fa97/y (full_adder_103)                                 0.00       5.91 r
+  fa97/U6/Y (AND2X1)                                      0.03       5.93 r
+  fa97/U8/Y (INVX1)                                       0.02       5.95 f
+  fa97/U5/Y (NAND2X1)                                     0.01       5.96 r
+  fa97/c (full_adder_103)                                 0.00       5.96 r
+  fa136/x (full_adder_64)                                 0.00       5.96 r
+  fa136/U8/Y (BUFX2)                                      0.04       6.00 r
+  fa136/U3/Y (INVX1)                                      0.02       6.02 f
+  fa136/U2/Y (MUX2X1)                                     0.05       6.08 r
+  fa136/U1/Y (MUX2X1)                                     0.07       6.15 r
+  fa136/s (full_adder_64)                                 0.00       6.15 r
+  fa154/cin (full_adder_46)                               0.00       6.15 r
+  fa154/U2/Y (MUX2X1)                                     0.06       6.20 r
+  fa154/U1/Y (MUX2X1)                                     0.06       6.26 r
+  fa154/s (full_adder_46)                                 0.00       6.26 r
+  fa181/x (full_adder_19)                                 0.00       6.26 r
+  fa181/U3/Y (INVX1)                                      0.03       6.29 f
+  fa181/U2/Y (MUX2X1)                                     0.05       6.34 r
+  fa181/U1/Y (MUX2X1)                                     0.06       6.40 r
+  fa181/s (full_adder_19)                                 0.00       6.40 r
+  fa191/x (full_adder_9)                                  0.00       6.40 r
+  fa191/U3/Y (INVX1)                                      0.03       6.43 f
+  fa191/U2/Y (MUX2X1)                                     0.05       6.48 r
+  fa191/U1/Y (MUX2X1)                                     0.06       6.54 r
+  fa191/s (full_adder_9)                                  0.00       6.54 r
+  car/A[21] (carry_lookahead_adder32)                     0.00       6.54 r
+  car/CLA5/x[1] (four_bit_cla_3)                          0.00       6.54 r
+  car/CLA5/cla1/a (bit_cla_11)                            0.00       6.54 r
+  car/CLA5/cla1/U3/Y (MUX2X1)                             0.07       6.61 r
+  car/CLA5/cla1/p (bit_cla_11)                            0.00       6.61 r
+  car/CLA5/U6/Y (AND2X1)                                  0.05       6.66 r
+  car/CLA5/U7/Y (AOI22X1)                                 0.02       6.69 f
+  car/CLA5/U3/Y (OAI21X1)                                 0.05       6.73 r
+  car/CLA5/gOut (four_bit_cla_3)                          0.00       6.73 r
+  car/U14/Y (INVX1)                                       0.02       6.75 f
+  car/U15/Y (NAND2X1)                                     0.02       6.78 r
+  car/U13/Y (INVX1)                                       0.03       6.80 f
+  car/U5/Y (INVX1)                                        0.02       6.82 r
+  car/CLA6/cin (four_bit_cla_2)                           0.00       6.82 r
+  car/CLA6/U13/Y (AOI21X1)                                0.02       6.84 f
+  car/CLA6/U15/Y (INVX1)                                  0.02       6.86 r
+  car/CLA6/U16/Y (AOI21X1)                                0.02       6.88 f
+  car/CLA6/U10/Y (INVX1)                                  0.02       6.90 r
+  car/CLA6/cla2/c (bit_cla_6)                             0.00       6.90 r
+  car/CLA6/cla2/U8/Y (AND2X1)                             0.04       6.94 r
+  car/CLA6/cla2/U10/Y (AOI21X1)                           0.02       6.96 f
+  car/CLA6/cla2/U6/Y (INVX1)                              0.00       6.96 r
+  car/CLA6/cla2/U7/Y (INVX1)                              0.03       6.99 f
+  car/CLA6/cla2/U9/Y (INVX8)                              0.09       7.08 r
+  car/CLA6/cla2/s (bit_cla_6)                             0.00       7.08 r
+  car/CLA6/s[2] (four_bit_cla_2)                          0.00       7.08 r
+  car/Sum[26] (carry_lookahead_adder32)                   0.00       7.08 r
+  result[26] (out)                                        0.00       7.08 r
+  data arrival time                                                  7.08
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.08
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: input_b[6] (input port clocked by clk)
+  Endpoint: result[12] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[6] (in)                                         0.00       5.70 r
+  C362/Y (AND2X1)                                         0.06       5.76 r
+  fa18/x (full_adder_182)                                 0.00       5.76 r
+  fa18/U3/Y (INVX1)                                       0.03       5.78 f
+  fa18/U2/Y (MUX2X1)                                      0.05       5.84 r
+  fa18/U1/Y (MUX2X1)                                      0.07       5.91 r
+  fa18/s (full_adder_182)                                 0.00       5.91 r
+  fa76/cin (full_adder_124)                               0.00       5.91 r
+  fa76/U9/Y (XOR2X1)                                      0.05       5.95 r
+  fa76/U1/Y (MUX2X1)                                      0.06       6.01 r
+  fa76/s (full_adder_124)                                 0.00       6.01 r
+  fa117/x (full_adder_83)                                 0.00       6.01 r
+  fa117/U3/Y (INVX1)                                      0.03       6.04 f
+  fa117/U11/Y (AOI21X1)                                   0.03       6.07 r
+  fa117/U8/Y (BUFX2)                                      0.04       6.11 r
+  fa117/U10/Y (MUX2X1)                                    0.05       6.17 r
+  fa117/s (full_adder_83)                                 0.00       6.17 r
+  fa142/x (full_adder_58)                                 0.00       6.17 r
+  fa142/U3/Y (INVX1)                                      0.03       6.20 f
+  fa142/U2/Y (MUX2X1)                                     0.05       6.25 r
+  fa142/U1/Y (MUX2X1)                                     0.06       6.31 r
+  fa142/s (full_adder_58)                                 0.00       6.31 r
+  ha37/x (half_adder_15)                                  0.00       6.31 r
+  ha37/U3/Y (AND2X2)                                      0.04       6.35 r
+  ha37/c (half_adder_15)                                  0.00       6.35 r
+  ha46/y (half_adder_6)                                   0.00       6.35 r
+  ha46/U2/Y (INVX1)                                       0.02       6.37 f
+  ha46/U1/Y (MUX2X1)                                      0.06       6.43 r
+  ha46/s (half_adder_6)                                   0.00       6.43 r
+  car/A[10] (carry_lookahead_adder32)                     0.00       6.43 r
+  car/CLA2/x[2] (four_bit_cla_6)                          0.00       6.43 r
+  car/CLA2/cla2/a (bit_cla_22)                            0.00       6.43 r
+  car/CLA2/cla2/U3/Y (MUX2X1)                             0.08       6.50 r
+  car/CLA2/cla2/p (bit_cla_22)                            0.00       6.50 r
+  car/CLA2/U3/Y (AND2X2)                                  0.04       6.55 r
+  car/CLA2/U6/Y (AOI22X1)                                 0.02       6.56 f
+  car/CLA2/U7/Y (OAI21X1)                                 0.04       6.61 r
+  car/CLA2/gOut (four_bit_cla_6)                          0.00       6.61 r
+  car/U22/Y (INVX1)                                       0.02       6.63 f
+  car/U20/Y (OAI21X1)                                     0.02       6.66 r
+  car/U18/Y (BUFX2)                                       0.04       6.70 r
+  car/CLA3/cin (four_bit_cla_5)                           0.00       6.70 r
+  car/CLA3/cla0/c (bit_cla_20)                            0.00       6.70 r
+  car/CLA3/cla0/U1/Y (MUX2X1)                             0.04       6.74 r
+  car/CLA3/cla0/U7/Y (INVX1)                              0.02       6.76 f
+  car/CLA3/cla0/U6/Y (INVX2)                              0.32       7.08 r
+  car/CLA3/cla0/s (bit_cla_20)                            0.00       7.08 r
+  car/CLA3/s[0] (four_bit_cla_5)                          0.00       7.08 r
+  car/Sum[12] (carry_lookahead_adder32)                   0.00       7.08 r
+  result[12] (out)                                        0.00       7.08 r
+  data arrival time                                                  7.08
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.08
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: input_b[5] (input port clocked by clk)
+  Endpoint: result[11] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[5] (in)                                         0.00       5.70 r
+  C345/Y (AND2X1)                                         0.07       5.77 r
+  fa5/cin (full_adder_195)                                0.00       5.77 r
+  fa5/U5/Y (XOR2X1)                                       0.06       5.83 r
+  fa5/U1/Y (MUX2X1)                                       0.06       5.89 r
+  fa5/s (full_adder_195)                                  0.00       5.89 r
+  fa74/x (full_adder_126)                                 0.00       5.89 r
+  fa74/U3/Y (INVX1)                                       0.03       5.92 f
+  fa74/U2/Y (MUX2X1)                                      0.05       5.97 r
+  fa74/U1/Y (MUX2X1)                                      0.06       6.03 r
+  fa74/s (full_adder_126)                                 0.00       6.03 r
+  fa115/x (full_adder_85)                                 0.00       6.03 r
+  fa115/U3/Y (INVX1)                                      0.03       6.06 f
+  fa115/U2/Y (MUX2X1)                                     0.05       6.11 r
+  fa115/U1/Y (MUX2X1)                                     0.06       6.17 r
+  fa115/s (full_adder_85)                                 0.00       6.17 r
+  fa140/x (full_adder_60)                                 0.00       6.17 r
+  fa140/U3/Y (INVX1)                                      0.03       6.20 f
+  fa140/U2/Y (MUX2X1)                                     0.05       6.26 r
+  fa140/U1/Y (MUX2X1)                                     0.06       6.31 r
+  fa140/s (full_adder_60)                                 0.00       6.31 r
+  ha35/x (half_adder_17)                                  0.00       6.31 r
+  ha35/U3/Y (AND2X1)                                      0.05       6.37 r
+  ha35/c (half_adder_17)                                  0.00       6.37 r
+  ha44/y (half_adder_8)                                   0.00       6.37 r
+  ha44/U2/Y (INVX1)                                       0.03       6.39 f
+  ha44/U1/Y (MUX2X1)                                      0.06       6.45 r
+  ha44/s (half_adder_8)                                   0.00       6.45 r
+  car/A[8] (carry_lookahead_adder32)                      0.00       6.45 r
+  car/CLA2/x[0] (four_bit_cla_6)                          0.00       6.45 r
+  car/CLA2/cla0/a (bit_cla_24)                            0.00       6.45 r
+  car/CLA2/cla0/U3/Y (MUX2X1)                             0.05       6.51 f
+  car/CLA2/cla0/p (bit_cla_24)                            0.00       6.51 f
+  car/CLA2/U13/Y (AOI21X1)                                0.04       6.55 r
+  car/CLA2/U12/Y (INVX1)                                  0.03       6.57 f
+  car/CLA2/U11/Y (AOI21X1)                                0.04       6.61 r
+  car/CLA2/U10/Y (INVX1)                                  0.03       6.64 f
+  car/CLA2/U9/Y (AOI21X1)                                 0.03       6.67 r
+  car/CLA2/U8/Y (INVX1)                                   0.02       6.69 f
+  car/CLA2/cla3/c (bit_cla_21)                            0.00       6.69 f
+  car/CLA2/cla3/U1/Y (MUX2X1)                             0.04       6.73 r
+  car/CLA2/cla3/U7/Y (INVX1)                              0.02       6.76 f
+  car/CLA2/cla3/U6/Y (INVX2)                              0.32       7.07 r
+  car/CLA2/cla3/s (bit_cla_21)                            0.00       7.07 r
+  car/CLA2/s[3] (four_bit_cla_6)                          0.00       7.07 r
+  car/Sum[11] (carry_lookahead_adder32)                   0.00       7.07 r
+  result[11] (out)                                        0.00       7.07 r
+  data arrival time                                                  7.07
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.07
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.05
+
+
+  Startpoint: input_a[3] (input port clocked by clk)
+  Endpoint: result[22] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_a[3] (in)                                         0.00       5.70 r
+  C474/Y (AND2X2)                                         0.04       5.74 r
+  fa25/x (full_adder_175)                                 0.00       5.74 r
+  fa25/U9/Y (XOR2X1)                                      0.06       5.80 r
+  fa25/U1/Y (MUX2X1)                                      0.07       5.87 r
+  fa25/s (full_adder_175)                                 0.00       5.87 r
+  fa83/cin (full_adder_117)                               0.00       5.87 r
+  fa83/U2/Y (MUX2X1)                                      0.06       5.92 r
+  fa83/U1/Y (MUX2X1)                                      0.06       5.98 r
+  fa83/s (full_adder_117)                                 0.00       5.98 r
+  fa124/x (full_adder_76)                                 0.00       5.98 r
+  fa124/U3/Y (INVX1)                                      0.03       6.01 f
+  fa124/U13/Y (AOI21X1)                                   0.03       6.04 r
+  fa124/U9/Y (INVX1)                                      0.02       6.06 f
+  fa124/U10/Y (INVX1)                                     0.01       6.07 r
+  fa124/U12/Y (MUX2X1)                                    0.06       6.12 r
+  fa124/s (full_adder_76)                                 0.00       6.12 r
+  fa149/x (full_adder_51)                                 0.00       6.12 r
+  fa149/U3/Y (INVX2)                                      0.02       6.14 f
+  fa149/U2/Y (MUX2X1)                                     0.06       6.20 r
+  fa149/U1/Y (MUX2X1)                                     0.05       6.25 r
+  fa149/s (full_adder_51)                                 0.00       6.25 r
+  fa176/x (full_adder_24)                                 0.00       6.25 r
+  fa176/U6/Y (INVX1)                                      0.03       6.28 f
+  fa176/U13/Y (AOI21X1)                                   0.03       6.32 r
+  fa176/U10/Y (BUFX2)                                     0.04       6.35 r
+  fa176/U12/Y (MUX2X1)                                    0.05       6.41 r
+  fa176/s (full_adder_24)                                 0.00       6.41 r
+  fa186/x (full_adder_14)                                 0.00       6.41 r
+  fa186/U7/Y (OAI21X1)                                    0.03       6.43 f
+  fa186/U5/Y (NAND2X1)                                    0.02       6.46 r
+  fa186/c (full_adder_14)                                 0.00       6.46 r
+  car/B[17] (carry_lookahead_adder32)                     0.00       6.46 r
+  car/CLA4/y[1] (four_bit_cla_4)                          0.00       6.46 r
+  car/CLA4/cla1/b (bit_cla_15)                            0.00       6.46 r
+  car/CLA4/cla1/U5/Y (BUFX2)                              0.04       6.50 r
+  car/CLA4/cla1/U4/Y (INVX1)                              0.02       6.52 f
+  car/CLA4/cla1/U3/Y (MUX2X1)                             0.07       6.58 r
+  car/CLA4/cla1/p (bit_cla_15)                            0.00       6.58 r
+  car/CLA4/U2/Y (AND2X2)                                  0.04       6.62 r
+  car/CLA4/U18/Y (AOI22X1)                                0.02       6.64 f
+  car/CLA4/U3/Y (BUFX2)                                   0.04       6.68 f
+  car/CLA4/U17/Y (OAI21X1)                                0.04       6.72 r
+  car/CLA4/gOut (four_bit_cla_4)                          0.00       6.72 r
+  car/U9/Y (AOI21X1)                                      0.02       6.74 f
+  car/U8/Y (INVX1)                                        0.01       6.75 r
+  car/U4/Y (BUFX2)                                        0.04       6.79 r
+  car/CLA5/cin (four_bit_cla_3)                           0.00       6.79 r
+  car/CLA5/U13/Y (AOI21X1)                                0.02       6.81 f
+  car/CLA5/U12/Y (INVX1)                                  0.01       6.83 r
+  car/CLA5/U15/Y (NAND2X1)                                0.01       6.84 f
+  car/CLA5/U10/Y (AND2X2)                                 0.04       6.88 f
+  car/CLA5/U14/Y (INVX1)                                  0.01       6.89 r
+  car/CLA5/cla2/c (bit_cla_10)                            0.00       6.89 r
+  car/CLA5/cla2/U7/Y (AND2X1)                             0.03       6.92 r
+  car/CLA5/cla2/U9/Y (AOI21X1)                            0.02       6.94 f
+  car/CLA5/cla2/U6/Y (BUFX2)                              0.04       6.98 f
+  car/CLA5/cla2/U1/Y (INVX8)                              0.08       7.07 r
+  car/CLA5/cla2/s (bit_cla_10)                            0.00       7.07 r
+  car/CLA5/s[2] (four_bit_cla_3)                          0.00       7.07 r
+  car/Sum[22] (carry_lookahead_adder32)                   0.00       7.07 r
+  result[22] (out)                                        0.00       7.07 r
+  data arrival time                                                  7.07
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.07
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.06
+
+
+  Startpoint: input_b[15]
+              (input port clocked by clk)
+  Endpoint: result[19] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 f
+  input_b[15] (in)                                        0.00       5.70 f
+  U9/Y (AND2X1)                                           0.05       5.75 f
+  fa13/x (full_adder_187)                                 0.00       5.75 f
+  fa13/U3/Y (INVX1)                                       0.01       5.76 r
+  fa13/U2/Y (AND2X1)                                      0.03       5.78 r
+  fa13/U9/Y (INVX1)                                       0.02       5.80 f
+  fa13/U12/Y (NAND2X1)                                    0.02       5.83 r
+  fa13/U14/Y (INVX1)                                      0.03       5.85 f
+  fa13/U1/Y (MUX2X1)                                      0.04       5.89 f
+  fa13/s (full_adder_187)                                 0.00       5.89 f
+  fa82/x (full_adder_118)                                 0.00       5.89 f
+  fa82/U16/Y (INVX1)                                      0.00       5.89 r
+  fa82/U6/Y (AND2X2)                                      0.03       5.93 r
+  fa82/U8/Y (INVX1)                                       0.01       5.94 f
+  fa82/U13/Y (NAND2X1)                                    0.02       5.96 r
+  fa82/U15/Y (INVX1)                                      0.03       5.99 f
+  fa82/U11/Y (OAI21X1)                                    0.06       6.05 r
+  fa82/s (full_adder_118)                                 0.00       6.05 r
+  fa123/x (full_adder_77)                                 0.00       6.05 r
+  fa123/U8/Y (XOR2X1)                                     0.05       6.10 r
+  fa123/U1/Y (MUX2X1)                                     0.06       6.16 r
+  fa123/s (full_adder_77)                                 0.00       6.16 r
+  fa148/x (full_adder_52)                                 0.00       6.16 r
+  fa148/U6/Y (XNOR2X1)                                    0.06       6.22 r
+  fa148/U3/Y (MUX2X1)                                     0.06       6.28 r
+  fa148/s (full_adder_52)                                 0.00       6.28 r
+  fa175/x (full_adder_25)                                 0.00       6.28 r
+  fa175/U4/Y (XNOR2X1)                                    0.04       6.32 f
+  fa175/U9/Y (NAND2X1)                                    0.02       6.34 r
+  fa175/U8/Y (OAI21X1)                                    0.03       6.36 f
+  fa175/s (full_adder_25)                                 0.00       6.36 f
+  fa185/x (full_adder_15)                                 0.00       6.36 f
+  fa185/U2/Y (OR2X1)                                      0.04       6.40 f
+  fa185/U9/Y (NAND2X1)                                    0.02       6.43 r
+  fa185/U10/Y (INVX1)                                     0.02       6.45 f
+  fa185/U1/Y (MUX2X1)                                     0.06       6.51 r
+  fa185/s (full_adder_15)                                 0.00       6.51 r
+  car/A[15] (carry_lookahead_adder32)                     0.00       6.51 r
+  car/CLA3/x[3] (four_bit_cla_5)                          0.00       6.51 r
+  car/CLA3/cla3/a (bit_cla_17)                            0.00       6.51 r
+  car/CLA3/cla3/U9/Y (NAND2X1)                            0.03       6.54 f
+  car/CLA3/cla3/U8/Y (OAI21X1)                            0.05       6.59 r
+  car/CLA3/cla3/p (bit_cla_17)                            0.00       6.59 r
+  car/CLA3/U7/Y (INVX1)                                   0.04       6.62 f
+  car/CLA3/U3/Y (OAI21X1)                                 0.04       6.66 r
+  car/CLA3/gOut (four_bit_cla_5)                          0.00       6.66 r
+  car/U19/Y (AOI21X1)                                     0.02       6.68 f
+  car/U17/Y (INVX1)                                       0.02       6.71 r
+  car/CLA4/cin (four_bit_cla_4)                           0.00       6.71 r
+  car/CLA4/U13/Y (NAND2X1)                                0.01       6.72 f
+  car/CLA4/U8/Y (AND2X2)                                  0.04       6.76 f
+  car/CLA4/U9/Y (INVX1)                                   0.01       6.77 r
+  car/CLA4/U11/Y (AOI21X1)                                0.01       6.78 f
+  car/CLA4/U6/Y (BUFX2)                                   0.04       6.82 f
+  car/CLA4/U16/Y (OAI21X1)                                0.04       6.86 r
+  car/CLA4/cla3/c (bit_cla_13)                            0.00       6.86 r
+  car/CLA4/cla3/U7/Y (AND2X1)                             0.04       6.90 r
+  car/CLA4/cla3/U9/Y (AOI21X1)                            0.02       6.92 f
+  car/CLA4/cla3/U6/Y (BUFX2)                              0.04       6.96 f
+  car/CLA4/cla3/U1/Y (INVX8)                              0.08       7.05 r
+  car/CLA4/cla3/s (bit_cla_13)                            0.00       7.05 r
+  car/CLA4/s[3] (four_bit_cla_4)                          0.00       7.05 r
+  car/Sum[19] (carry_lookahead_adder32)                   0.00       7.05 r
+  result[19] (out)                                        0.00       7.05 r
+  data arrival time                                                  7.05
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.05
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: input_b[14]
+              (input port clocked by clk)
+  Endpoint: result[25] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[14] (in)                                        0.00       5.70 r
+  C493/Y (AND2X1)                                         0.06       5.76 r
+  fa40/x (full_adder_160)                                 0.00       5.76 r
+  fa40/U3/Y (INVX1)                                       0.03       5.78 f
+  fa40/U2/Y (MUX2X1)                                      0.05       5.84 r
+  fa40/U1/Y (MUX2X1)                                      0.07       5.91 r
+  fa40/s (full_adder_160)                                 0.00       5.91 r
+  fa97/y (full_adder_103)                                 0.00       5.91 r
+  fa97/U6/Y (AND2X1)                                      0.03       5.93 r
+  fa97/U8/Y (INVX1)                                       0.02       5.95 f
+  fa97/U5/Y (NAND2X1)                                     0.01       5.96 r
+  fa97/c (full_adder_103)                                 0.00       5.96 r
+  fa136/x (full_adder_64)                                 0.00       5.96 r
+  fa136/U8/Y (BUFX2)                                      0.04       6.00 r
+  fa136/U3/Y (INVX1)                                      0.02       6.02 f
+  fa136/U2/Y (MUX2X1)                                     0.05       6.08 r
+  fa136/U1/Y (MUX2X1)                                     0.07       6.15 r
+  fa136/s (full_adder_64)                                 0.00       6.15 r
+  fa154/cin (full_adder_46)                               0.00       6.15 r
+  fa154/U2/Y (MUX2X1)                                     0.06       6.20 r
+  fa154/U1/Y (MUX2X1)                                     0.06       6.26 r
+  fa154/s (full_adder_46)                                 0.00       6.26 r
+  fa181/x (full_adder_19)                                 0.00       6.26 r
+  fa181/U3/Y (INVX1)                                      0.03       6.29 f
+  fa181/U2/Y (MUX2X1)                                     0.05       6.34 r
+  fa181/U1/Y (MUX2X1)                                     0.06       6.40 r
+  fa181/s (full_adder_19)                                 0.00       6.40 r
+  fa191/x (full_adder_9)                                  0.00       6.40 r
+  fa191/U3/Y (INVX1)                                      0.03       6.43 f
+  fa191/U2/Y (MUX2X1)                                     0.05       6.48 r
+  fa191/U1/Y (MUX2X1)                                     0.06       6.54 r
+  fa191/s (full_adder_9)                                  0.00       6.54 r
+  car/A[21] (carry_lookahead_adder32)                     0.00       6.54 r
+  car/CLA5/x[1] (four_bit_cla_3)                          0.00       6.54 r
+  car/CLA5/cla1/a (bit_cla_11)                            0.00       6.54 r
+  car/CLA5/cla1/U3/Y (MUX2X1)                             0.07       6.61 r
+  car/CLA5/cla1/p (bit_cla_11)                            0.00       6.61 r
+  car/CLA5/U6/Y (AND2X1)                                  0.05       6.66 r
+  car/CLA5/U7/Y (AOI22X1)                                 0.02       6.69 f
+  car/CLA5/U3/Y (OAI21X1)                                 0.05       6.73 r
+  car/CLA5/gOut (four_bit_cla_3)                          0.00       6.73 r
+  car/U14/Y (INVX1)                                       0.02       6.75 f
+  car/U15/Y (NAND2X1)                                     0.02       6.78 r
+  car/U13/Y (INVX1)                                       0.03       6.80 f
+  car/U5/Y (INVX1)                                        0.02       6.82 r
+  car/CLA6/cin (four_bit_cla_2)                           0.00       6.82 r
+  car/CLA6/U13/Y (AOI21X1)                                0.02       6.84 f
+  car/CLA6/U15/Y (INVX1)                                  0.02       6.86 r
+  car/CLA6/cla1/c (bit_cla_7)                             0.00       6.86 r
+  car/CLA6/cla1/U1/Y (AND2X1)                             0.04       6.90 r
+  car/CLA6/cla1/U9/Y (AOI21X1)                            0.02       6.92 f
+  car/CLA6/cla1/U8/Y (BUFX2)                              0.04       6.96 f
+  car/CLA6/cla1/U5/Y (INVX8)                              0.08       7.05 r
+  car/CLA6/cla1/s (bit_cla_7)                             0.00       7.05 r
+  car/CLA6/s[1] (four_bit_cla_2)                          0.00       7.05 r
+  car/Sum[25] (carry_lookahead_adder32)                   0.00       7.05 r
+  result[25] (out)                                        0.00       7.05 r
+  data arrival time                                                  7.05
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.05
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.08
+
+
+  Startpoint: input_b[5] (input port clocked by clk)
+  Endpoint: result[10] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[5] (in)                                         0.00       5.70 r
+  C345/Y (AND2X1)                                         0.07       5.77 r
+  fa5/cin (full_adder_195)                                0.00       5.77 r
+  fa5/U5/Y (XOR2X1)                                       0.06       5.83 r
+  fa5/U1/Y (MUX2X1)                                       0.06       5.89 r
+  fa5/s (full_adder_195)                                  0.00       5.89 r
+  fa74/x (full_adder_126)                                 0.00       5.89 r
+  fa74/U3/Y (INVX1)                                       0.03       5.92 f
+  fa74/U2/Y (MUX2X1)                                      0.05       5.97 r
+  fa74/U1/Y (MUX2X1)                                      0.06       6.03 r
+  fa74/s (full_adder_126)                                 0.00       6.03 r
+  fa115/x (full_adder_85)                                 0.00       6.03 r
+  fa115/U3/Y (INVX1)                                      0.03       6.06 f
+  fa115/U2/Y (MUX2X1)                                     0.05       6.11 r
+  fa115/U1/Y (MUX2X1)                                     0.06       6.17 r
+  fa115/s (full_adder_85)                                 0.00       6.17 r
+  fa140/x (full_adder_60)                                 0.00       6.17 r
+  fa140/U3/Y (INVX1)                                      0.03       6.20 f
+  fa140/U2/Y (MUX2X1)                                     0.05       6.26 r
+  fa140/U1/Y (MUX2X1)                                     0.06       6.31 r
+  fa140/s (full_adder_60)                                 0.00       6.31 r
+  ha35/x (half_adder_17)                                  0.00       6.31 r
+  ha35/U3/Y (AND2X1)                                      0.05       6.37 r
+  ha35/c (half_adder_17)                                  0.00       6.37 r
+  ha44/y (half_adder_8)                                   0.00       6.37 r
+  ha44/U2/Y (INVX1)                                       0.03       6.39 f
+  ha44/U1/Y (MUX2X1)                                      0.06       6.45 r
+  ha44/s (half_adder_8)                                   0.00       6.45 r
+  car/A[8] (carry_lookahead_adder32)                      0.00       6.45 r
+  car/CLA2/x[0] (four_bit_cla_6)                          0.00       6.45 r
+  car/CLA2/cla0/a (bit_cla_24)                            0.00       6.45 r
+  car/CLA2/cla0/U3/Y (MUX2X1)                             0.05       6.51 f
+  car/CLA2/cla0/p (bit_cla_24)                            0.00       6.51 f
+  car/CLA2/U13/Y (AOI21X1)                                0.04       6.55 r
+  car/CLA2/U12/Y (INVX1)                                  0.03       6.57 f
+  car/CLA2/U11/Y (AOI21X1)                                0.04       6.61 r
+  car/CLA2/U10/Y (INVX1)                                  0.03       6.64 f
+  car/CLA2/cla2/c (bit_cla_22)                            0.00       6.64 f
+  car/CLA2/cla2/U1/Y (MUX2X1)                             0.04       6.68 r
+  car/CLA2/cla2/U6/Y (INVX1)                              0.02       6.70 f
+  car/CLA2/cla2/U7/Y (INVX2)                              0.32       7.02 r
+  car/CLA2/cla2/s (bit_cla_22)                            0.00       7.02 r
+  car/CLA2/s[2] (four_bit_cla_6)                          0.00       7.02 r
+  car/Sum[10] (carry_lookahead_adder32)                   0.00       7.02 r
+  result[10] (out)                                        0.00       7.02 r
+  data arrival time                                                  7.02
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.02
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.11
+
+
+  Startpoint: input_a[3] (input port clocked by clk)
+  Endpoint: result[21] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_a[3] (in)                                         0.00       5.70 r
+  C474/Y (AND2X2)                                         0.04       5.74 r
+  fa25/x (full_adder_175)                                 0.00       5.74 r
+  fa25/U9/Y (XOR2X1)                                      0.06       5.80 r
+  fa25/U1/Y (MUX2X1)                                      0.07       5.87 r
+  fa25/s (full_adder_175)                                 0.00       5.87 r
+  fa83/cin (full_adder_117)                               0.00       5.87 r
+  fa83/U2/Y (MUX2X1)                                      0.06       5.92 r
+  fa83/U1/Y (MUX2X1)                                      0.06       5.98 r
+  fa83/s (full_adder_117)                                 0.00       5.98 r
+  fa124/x (full_adder_76)                                 0.00       5.98 r
+  fa124/U3/Y (INVX1)                                      0.03       6.01 f
+  fa124/U13/Y (AOI21X1)                                   0.03       6.04 r
+  fa124/U9/Y (INVX1)                                      0.02       6.06 f
+  fa124/U10/Y (INVX1)                                     0.01       6.07 r
+  fa124/U12/Y (MUX2X1)                                    0.06       6.12 r
+  fa124/s (full_adder_76)                                 0.00       6.12 r
+  fa149/x (full_adder_51)                                 0.00       6.12 r
+  fa149/U3/Y (INVX2)                                      0.02       6.14 f
+  fa149/U2/Y (MUX2X1)                                     0.06       6.20 r
+  fa149/U1/Y (MUX2X1)                                     0.05       6.25 r
+  fa149/s (full_adder_51)                                 0.00       6.25 r
+  fa176/x (full_adder_24)                                 0.00       6.25 r
+  fa176/U6/Y (INVX1)                                      0.03       6.28 f
+  fa176/U13/Y (AOI21X1)                                   0.03       6.32 r
+  fa176/U10/Y (BUFX2)                                     0.04       6.35 r
+  fa176/U12/Y (MUX2X1)                                    0.05       6.41 r
+  fa176/s (full_adder_24)                                 0.00       6.41 r
+  fa186/x (full_adder_14)                                 0.00       6.41 r
+  fa186/U7/Y (OAI21X1)                                    0.03       6.43 f
+  fa186/U5/Y (NAND2X1)                                    0.02       6.46 r
+  fa186/c (full_adder_14)                                 0.00       6.46 r
+  car/B[17] (carry_lookahead_adder32)                     0.00       6.46 r
+  car/CLA4/y[1] (four_bit_cla_4)                          0.00       6.46 r
+  car/CLA4/cla1/b (bit_cla_15)                            0.00       6.46 r
+  car/CLA4/cla1/U5/Y (BUFX2)                              0.04       6.50 r
+  car/CLA4/cla1/U4/Y (INVX1)                              0.02       6.52 f
+  car/CLA4/cla1/U3/Y (MUX2X1)                             0.07       6.58 r
+  car/CLA4/cla1/p (bit_cla_15)                            0.00       6.58 r
+  car/CLA4/U2/Y (AND2X2)                                  0.04       6.62 r
+  car/CLA4/U18/Y (AOI22X1)                                0.02       6.64 f
+  car/CLA4/U3/Y (BUFX2)                                   0.04       6.68 f
+  car/CLA4/U17/Y (OAI21X1)                                0.04       6.72 r
+  car/CLA4/gOut (four_bit_cla_4)                          0.00       6.72 r
+  car/U9/Y (AOI21X1)                                      0.02       6.74 f
+  car/U8/Y (INVX1)                                        0.01       6.75 r
+  car/U4/Y (BUFX2)                                        0.04       6.79 r
+  car/CLA5/cin (four_bit_cla_3)                           0.00       6.79 r
+  car/CLA5/U13/Y (AOI21X1)                                0.02       6.81 f
+  car/CLA5/U12/Y (INVX1)                                  0.01       6.83 r
+  car/CLA5/cla1/c (bit_cla_11)                            0.00       6.83 r
+  car/CLA5/cla1/U7/Y (AND2X1)                             0.04       6.87 r
+  car/CLA5/cla1/U9/Y (AOI21X1)                            0.02       6.89 f
+  car/CLA5/cla1/U6/Y (BUFX2)                              0.04       6.93 f
+  car/CLA5/cla1/U1/Y (INVX8)                              0.08       7.01 r
+  car/CLA5/cla1/s (bit_cla_11)                            0.00       7.01 r
+  car/CLA5/s[1] (four_bit_cla_3)                          0.00       7.01 r
+  car/Sum[21] (carry_lookahead_adder32)                   0.00       7.01 r
+  result[21] (out)                                        0.00       7.01 r
+  data arrival time                                                  7.01
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.01
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.11
+
+
+  Startpoint: input_b[15]
+              (input port clocked by clk)
+  Endpoint: result[18] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 f
+  input_b[15] (in)                                        0.00       5.70 f
+  U9/Y (AND2X1)                                           0.05       5.75 f
+  fa13/x (full_adder_187)                                 0.00       5.75 f
+  fa13/U3/Y (INVX1)                                       0.01       5.76 r
+  fa13/U2/Y (AND2X1)                                      0.03       5.78 r
+  fa13/U9/Y (INVX1)                                       0.02       5.80 f
+  fa13/U12/Y (NAND2X1)                                    0.02       5.83 r
+  fa13/U14/Y (INVX1)                                      0.03       5.85 f
+  fa13/U1/Y (MUX2X1)                                      0.04       5.89 f
+  fa13/s (full_adder_187)                                 0.00       5.89 f
+  fa82/x (full_adder_118)                                 0.00       5.89 f
+  fa82/U16/Y (INVX1)                                      0.00       5.89 r
+  fa82/U6/Y (AND2X2)                                      0.03       5.93 r
+  fa82/U8/Y (INVX1)                                       0.01       5.94 f
+  fa82/U13/Y (NAND2X1)                                    0.02       5.96 r
+  fa82/U15/Y (INVX1)                                      0.03       5.99 f
+  fa82/U11/Y (OAI21X1)                                    0.06       6.05 r
+  fa82/s (full_adder_118)                                 0.00       6.05 r
+  fa123/x (full_adder_77)                                 0.00       6.05 r
+  fa123/U8/Y (XOR2X1)                                     0.05       6.10 r
+  fa123/U1/Y (MUX2X1)                                     0.06       6.16 r
+  fa123/s (full_adder_77)                                 0.00       6.16 r
+  fa148/x (full_adder_52)                                 0.00       6.16 r
+  fa148/U6/Y (XNOR2X1)                                    0.06       6.22 r
+  fa148/U3/Y (MUX2X1)                                     0.06       6.28 r
+  fa148/s (full_adder_52)                                 0.00       6.28 r
+  fa175/x (full_adder_25)                                 0.00       6.28 r
+  fa175/U4/Y (XNOR2X1)                                    0.04       6.32 f
+  fa175/U9/Y (NAND2X1)                                    0.02       6.34 r
+  fa175/U8/Y (OAI21X1)                                    0.03       6.36 f
+  fa175/s (full_adder_25)                                 0.00       6.36 f
+  fa185/x (full_adder_15)                                 0.00       6.36 f
+  fa185/U2/Y (OR2X1)                                      0.04       6.40 f
+  fa185/U9/Y (NAND2X1)                                    0.02       6.43 r
+  fa185/U10/Y (INVX1)                                     0.02       6.45 f
+  fa185/U1/Y (MUX2X1)                                     0.06       6.51 r
+  fa185/s (full_adder_15)                                 0.00       6.51 r
+  car/A[15] (carry_lookahead_adder32)                     0.00       6.51 r
+  car/CLA3/x[3] (four_bit_cla_5)                          0.00       6.51 r
+  car/CLA3/cla3/a (bit_cla_17)                            0.00       6.51 r
+  car/CLA3/cla3/U9/Y (NAND2X1)                            0.03       6.54 f
+  car/CLA3/cla3/U8/Y (OAI21X1)                            0.05       6.59 r
+  car/CLA3/cla3/p (bit_cla_17)                            0.00       6.59 r
+  car/CLA3/U7/Y (INVX1)                                   0.04       6.62 f
+  car/CLA3/U3/Y (OAI21X1)                                 0.04       6.66 r
+  car/CLA3/gOut (four_bit_cla_5)                          0.00       6.66 r
+  car/U19/Y (AOI21X1)                                     0.02       6.68 f
+  car/U17/Y (INVX1)                                       0.02       6.71 r
+  car/CLA4/cin (four_bit_cla_4)                           0.00       6.71 r
+  car/CLA4/U13/Y (NAND2X1)                                0.01       6.72 f
+  car/CLA4/U8/Y (AND2X2)                                  0.04       6.76 f
+  car/CLA4/U9/Y (INVX1)                                   0.01       6.77 r
+  car/CLA4/U11/Y (AOI21X1)                                0.01       6.78 f
+  car/CLA4/U6/Y (BUFX2)                                   0.04       6.82 f
+  car/CLA4/U10/Y (INVX1)                                  0.00       6.82 r
+  car/CLA4/cla2/c (bit_cla_14)                            0.00       6.82 r
+  car/CLA4/cla2/U8/Y (AND2X1)                             0.04       6.87 r
+  car/CLA4/cla2/U9/Y (AOI21X1)                            0.02       6.89 f
+  car/CLA4/cla2/U7/Y (BUFX2)                              0.04       6.93 f
+  car/CLA4/cla2/U1/Y (INVX8)                              0.08       7.01 r
+  car/CLA4/cla2/s (bit_cla_14)                            0.00       7.01 r
+  car/CLA4/s[2] (four_bit_cla_4)                          0.00       7.01 r
+  car/Sum[18] (carry_lookahead_adder32)                   0.00       7.01 r
+  result[18] (out)                                        0.00       7.01 r
+  data arrival time                                                  7.01
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.01
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.11
+
+
+  Startpoint: input_b[14]
+              (input port clocked by clk)
+  Endpoint: result[24] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[14] (in)                                        0.00       5.70 r
+  C493/Y (AND2X1)                                         0.06       5.76 r
+  fa40/x (full_adder_160)                                 0.00       5.76 r
+  fa40/U3/Y (INVX1)                                       0.03       5.78 f
+  fa40/U2/Y (MUX2X1)                                      0.05       5.84 r
+  fa40/U1/Y (MUX2X1)                                      0.07       5.91 r
+  fa40/s (full_adder_160)                                 0.00       5.91 r
+  fa97/y (full_adder_103)                                 0.00       5.91 r
+  fa97/U6/Y (AND2X1)                                      0.03       5.93 r
+  fa97/U8/Y (INVX1)                                       0.02       5.95 f
+  fa97/U5/Y (NAND2X1)                                     0.01       5.96 r
+  fa97/c (full_adder_103)                                 0.00       5.96 r
+  fa136/x (full_adder_64)                                 0.00       5.96 r
+  fa136/U8/Y (BUFX2)                                      0.04       6.00 r
+  fa136/U3/Y (INVX1)                                      0.02       6.02 f
+  fa136/U2/Y (MUX2X1)                                     0.05       6.08 r
+  fa136/U1/Y (MUX2X1)                                     0.07       6.15 r
+  fa136/s (full_adder_64)                                 0.00       6.15 r
+  fa154/cin (full_adder_46)                               0.00       6.15 r
+  fa154/U2/Y (MUX2X1)                                     0.06       6.20 r
+  fa154/U1/Y (MUX2X1)                                     0.06       6.26 r
+  fa154/s (full_adder_46)                                 0.00       6.26 r
+  fa181/x (full_adder_19)                                 0.00       6.26 r
+  fa181/U3/Y (INVX1)                                      0.03       6.29 f
+  fa181/U2/Y (MUX2X1)                                     0.05       6.34 r
+  fa181/U1/Y (MUX2X1)                                     0.06       6.40 r
+  fa181/s (full_adder_19)                                 0.00       6.40 r
+  fa191/x (full_adder_9)                                  0.00       6.40 r
+  fa191/U3/Y (INVX1)                                      0.03       6.43 f
+  fa191/U2/Y (MUX2X1)                                     0.05       6.48 r
+  fa191/U1/Y (MUX2X1)                                     0.06       6.54 r
+  fa191/s (full_adder_9)                                  0.00       6.54 r
+  car/A[21] (carry_lookahead_adder32)                     0.00       6.54 r
+  car/CLA5/x[1] (four_bit_cla_3)                          0.00       6.54 r
+  car/CLA5/cla1/a (bit_cla_11)                            0.00       6.54 r
+  car/CLA5/cla1/U3/Y (MUX2X1)                             0.07       6.61 r
+  car/CLA5/cla1/p (bit_cla_11)                            0.00       6.61 r
+  car/CLA5/U6/Y (AND2X1)                                  0.05       6.66 r
+  car/CLA5/U7/Y (AOI22X1)                                 0.02       6.69 f
+  car/CLA5/U3/Y (OAI21X1)                                 0.05       6.73 r
+  car/CLA5/gOut (four_bit_cla_3)                          0.00       6.73 r
+  car/U14/Y (INVX1)                                       0.02       6.75 f
+  car/U15/Y (NAND2X1)                                     0.02       6.78 r
+  car/U13/Y (INVX1)                                       0.03       6.80 f
+  car/U5/Y (INVX1)                                        0.02       6.82 r
+  car/CLA6/cin (four_bit_cla_2)                           0.00       6.82 r
+  car/CLA6/cla0/c (bit_cla_8)                             0.00       6.82 r
+  car/CLA6/cla0/U8/Y (AND2X1)                             0.04       6.86 r
+  car/CLA6/cla0/U9/Y (AOI21X1)                            0.02       6.88 f
+  car/CLA6/cla0/U7/Y (BUFX2)                              0.04       6.92 f
+  car/CLA6/cla0/U1/Y (INVX8)                              0.08       7.01 r
+  car/CLA6/cla0/s (bit_cla_8)                             0.00       7.01 r
+  car/CLA6/s[0] (four_bit_cla_2)                          0.00       7.01 r
+  car/Sum[24] (carry_lookahead_adder32)                   0.00       7.01 r
+  result[24] (out)                                        0.00       7.01 r
+  data arrival time                                                  7.01
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -7.01
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.12
+
+
+  Startpoint: input_b[6] (input port clocked by clk)
+  Endpoint: result[15] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[6] (in)                                         0.00       5.70 r
+  C362/Y (AND2X1)                                         0.06       5.76 r
+  fa18/x (full_adder_182)                                 0.00       5.76 r
+  fa18/U3/Y (INVX1)                                       0.03       5.78 f
+  fa18/U2/Y (MUX2X1)                                      0.05       5.84 r
+  fa18/U1/Y (MUX2X1)                                      0.07       5.91 r
+  fa18/s (full_adder_182)                                 0.00       5.91 r
+  fa76/cin (full_adder_124)                               0.00       5.91 r
+  fa76/U9/Y (XOR2X1)                                      0.05       5.95 r
+  fa76/U1/Y (MUX2X1)                                      0.06       6.01 r
+  fa76/s (full_adder_124)                                 0.00       6.01 r
+  fa117/x (full_adder_83)                                 0.00       6.01 r
+  fa117/U3/Y (INVX1)                                      0.03       6.04 f
+  fa117/U11/Y (AOI21X1)                                   0.03       6.07 r
+  fa117/U8/Y (BUFX2)                                      0.04       6.11 r
+  fa117/U10/Y (MUX2X1)                                    0.05       6.17 r
+  fa117/s (full_adder_83)                                 0.00       6.17 r
+  fa142/x (full_adder_58)                                 0.00       6.17 r
+  fa142/U3/Y (INVX1)                                      0.03       6.20 f
+  fa142/U2/Y (MUX2X1)                                     0.05       6.25 r
+  fa142/U1/Y (MUX2X1)                                     0.06       6.31 r
+  fa142/s (full_adder_58)                                 0.00       6.31 r
+  ha37/x (half_adder_15)                                  0.00       6.31 r
+  ha37/U3/Y (AND2X2)                                      0.04       6.35 r
+  ha37/c (half_adder_15)                                  0.00       6.35 r
+  ha46/y (half_adder_6)                                   0.00       6.35 r
+  ha46/U2/Y (INVX1)                                       0.02       6.37 f
+  ha46/U1/Y (MUX2X1)                                      0.06       6.43 r
+  ha46/s (half_adder_6)                                   0.00       6.43 r
+  car/A[10] (carry_lookahead_adder32)                     0.00       6.43 r
+  car/CLA2/x[2] (four_bit_cla_6)                          0.00       6.43 r
+  car/CLA2/cla2/a (bit_cla_22)                            0.00       6.43 r
+  car/CLA2/cla2/U3/Y (MUX2X1)                             0.08       6.50 r
+  car/CLA2/cla2/p (bit_cla_22)                            0.00       6.50 r
+  car/CLA2/U3/Y (AND2X2)                                  0.04       6.55 r
+  car/CLA2/U6/Y (AOI22X1)                                 0.02       6.56 f
+  car/CLA2/U7/Y (OAI21X1)                                 0.04       6.61 r
+  car/CLA2/gOut (four_bit_cla_6)                          0.00       6.61 r
+  car/U22/Y (INVX1)                                       0.02       6.63 f
+  car/U20/Y (OAI21X1)                                     0.02       6.66 r
+  car/U18/Y (BUFX2)                                       0.04       6.70 r
+  car/CLA3/cin (four_bit_cla_5)                           0.00       6.70 r
+  car/CLA3/U13/Y (AOI21X1)                                0.03       6.72 f
+  car/CLA3/U12/Y (INVX1)                                  0.02       6.74 r
+  car/CLA3/U14/Y (AOI21X1)                                0.02       6.77 f
+  car/CLA3/U10/Y (INVX1)                                  0.02       6.78 r
+  car/CLA3/U9/Y (AOI21X1)                                 0.02       6.80 f
+  car/CLA3/U8/Y (INVX1)                                   0.01       6.81 r
+  car/CLA3/cla3/c (bit_cla_17)                            0.00       6.81 r
+  car/CLA3/cla3/U5/Y (AND2X1)                             0.03       6.84 r
+  car/CLA3/cla3/U6/Y (AOI21X1)                            0.02       6.86 f
+  car/CLA3/cla3/U4/Y (BUFX2)                              0.04       6.90 f
+  car/CLA3/cla3/U1/Y (INVX8)                              0.08       6.99 r
+  car/CLA3/cla3/s (bit_cla_17)                            0.00       6.99 r
+  car/CLA3/s[3] (four_bit_cla_5)                          0.00       6.99 r
+  car/Sum[15] (carry_lookahead_adder32)                   0.00       6.99 r
+  result[15] (out)                                        0.00       6.99 r
+  data arrival time                                                  6.99
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -6.99
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.14
+
+
+  Startpoint: input_b[6] (input port clocked by clk)
+  Endpoint: result[14] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[6] (in)                                         0.00       5.70 r
+  C362/Y (AND2X1)                                         0.06       5.76 r
+  fa18/x (full_adder_182)                                 0.00       5.76 r
+  fa18/U3/Y (INVX1)                                       0.03       5.78 f
+  fa18/U2/Y (MUX2X1)                                      0.05       5.84 r
+  fa18/U1/Y (MUX2X1)                                      0.07       5.91 r
+  fa18/s (full_adder_182)                                 0.00       5.91 r
+  fa76/cin (full_adder_124)                               0.00       5.91 r
+  fa76/U9/Y (XOR2X1)                                      0.05       5.95 r
+  fa76/U1/Y (MUX2X1)                                      0.06       6.01 r
+  fa76/s (full_adder_124)                                 0.00       6.01 r
+  fa117/x (full_adder_83)                                 0.00       6.01 r
+  fa117/U3/Y (INVX1)                                      0.03       6.04 f
+  fa117/U11/Y (AOI21X1)                                   0.03       6.07 r
+  fa117/U8/Y (BUFX2)                                      0.04       6.11 r
+  fa117/U10/Y (MUX2X1)                                    0.05       6.17 r
+  fa117/s (full_adder_83)                                 0.00       6.17 r
+  fa142/x (full_adder_58)                                 0.00       6.17 r
+  fa142/U3/Y (INVX1)                                      0.03       6.20 f
+  fa142/U2/Y (MUX2X1)                                     0.05       6.25 r
+  fa142/U1/Y (MUX2X1)                                     0.06       6.31 r
+  fa142/s (full_adder_58)                                 0.00       6.31 r
+  ha37/x (half_adder_15)                                  0.00       6.31 r
+  ha37/U3/Y (AND2X2)                                      0.04       6.35 r
+  ha37/c (half_adder_15)                                  0.00       6.35 r
+  ha46/y (half_adder_6)                                   0.00       6.35 r
+  ha46/U2/Y (INVX1)                                       0.02       6.37 f
+  ha46/U1/Y (MUX2X1)                                      0.06       6.43 r
+  ha46/s (half_adder_6)                                   0.00       6.43 r
+  car/A[10] (carry_lookahead_adder32)                     0.00       6.43 r
+  car/CLA2/x[2] (four_bit_cla_6)                          0.00       6.43 r
+  car/CLA2/cla2/a (bit_cla_22)                            0.00       6.43 r
+  car/CLA2/cla2/U3/Y (MUX2X1)                             0.08       6.50 r
+  car/CLA2/cla2/p (bit_cla_22)                            0.00       6.50 r
+  car/CLA2/U3/Y (AND2X2)                                  0.04       6.55 r
+  car/CLA2/U6/Y (AOI22X1)                                 0.02       6.56 f
+  car/CLA2/U7/Y (OAI21X1)                                 0.04       6.61 r
+  car/CLA2/gOut (four_bit_cla_6)                          0.00       6.61 r
+  car/U22/Y (INVX1)                                       0.02       6.63 f
+  car/U20/Y (OAI21X1)                                     0.02       6.66 r
+  car/U18/Y (BUFX2)                                       0.04       6.70 r
+  car/CLA3/cin (four_bit_cla_5)                           0.00       6.70 r
+  car/CLA3/U13/Y (AOI21X1)                                0.03       6.72 f
+  car/CLA3/U12/Y (INVX1)                                  0.02       6.74 r
+  car/CLA3/U14/Y (AOI21X1)                                0.02       6.77 f
+  car/CLA3/U10/Y (INVX1)                                  0.02       6.78 r
+  car/CLA3/cla2/c (bit_cla_18)                            0.00       6.78 r
+  car/CLA3/cla2/U6/Y (AND2X1)                             0.04       6.83 r
+  car/CLA3/cla2/U8/Y (AOI21X1)                            0.02       6.84 f
+  car/CLA3/cla2/U2/Y (BUFX2)                              0.04       6.89 f
+  car/CLA3/cla2/U1/Y (INVX8)                              0.08       6.97 r
+  car/CLA3/cla2/s (bit_cla_18)                            0.00       6.97 r
+  car/CLA3/s[2] (four_bit_cla_5)                          0.00       6.97 r
+  car/Sum[14] (carry_lookahead_adder32)                   0.00       6.97 r
+  result[14] (out)                                        0.00       6.97 r
+  data arrival time                                                  6.97
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -6.97
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.15
+
+
+  Startpoint: input_b[15]
+              (input port clocked by clk)
+  Endpoint: result[17] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 f
+  input_b[15] (in)                                        0.00       5.70 f
+  U9/Y (AND2X1)                                           0.05       5.75 f
+  fa13/x (full_adder_187)                                 0.00       5.75 f
+  fa13/U3/Y (INVX1)                                       0.01       5.76 r
+  fa13/U2/Y (AND2X1)                                      0.03       5.78 r
+  fa13/U9/Y (INVX1)                                       0.02       5.80 f
+  fa13/U12/Y (NAND2X1)                                    0.02       5.83 r
+  fa13/U14/Y (INVX1)                                      0.03       5.85 f
+  fa13/U1/Y (MUX2X1)                                      0.04       5.89 f
+  fa13/s (full_adder_187)                                 0.00       5.89 f
+  fa82/x (full_adder_118)                                 0.00       5.89 f
+  fa82/U16/Y (INVX1)                                      0.00       5.89 r
+  fa82/U6/Y (AND2X2)                                      0.03       5.93 r
+  fa82/U8/Y (INVX1)                                       0.01       5.94 f
+  fa82/U13/Y (NAND2X1)                                    0.02       5.96 r
+  fa82/U15/Y (INVX1)                                      0.03       5.99 f
+  fa82/U11/Y (OAI21X1)                                    0.06       6.05 r
+  fa82/s (full_adder_118)                                 0.00       6.05 r
+  fa123/x (full_adder_77)                                 0.00       6.05 r
+  fa123/U8/Y (XOR2X1)                                     0.05       6.10 r
+  fa123/U1/Y (MUX2X1)                                     0.06       6.16 r
+  fa123/s (full_adder_77)                                 0.00       6.16 r
+  fa148/x (full_adder_52)                                 0.00       6.16 r
+  fa148/U6/Y (XNOR2X1)                                    0.06       6.22 r
+  fa148/U3/Y (MUX2X1)                                     0.06       6.28 r
+  fa148/s (full_adder_52)                                 0.00       6.28 r
+  fa175/x (full_adder_25)                                 0.00       6.28 r
+  fa175/U4/Y (XNOR2X1)                                    0.04       6.32 f
+  fa175/U9/Y (NAND2X1)                                    0.02       6.34 r
+  fa175/U8/Y (OAI21X1)                                    0.03       6.36 f
+  fa175/s (full_adder_25)                                 0.00       6.36 f
+  fa185/x (full_adder_15)                                 0.00       6.36 f
+  fa185/U2/Y (OR2X1)                                      0.04       6.40 f
+  fa185/U9/Y (NAND2X1)                                    0.02       6.43 r
+  fa185/U10/Y (INVX1)                                     0.02       6.45 f
+  fa185/U1/Y (MUX2X1)                                     0.06       6.51 r
+  fa185/s (full_adder_15)                                 0.00       6.51 r
+  car/A[15] (carry_lookahead_adder32)                     0.00       6.51 r
+  car/CLA3/x[3] (four_bit_cla_5)                          0.00       6.51 r
+  car/CLA3/cla3/a (bit_cla_17)                            0.00       6.51 r
+  car/CLA3/cla3/U9/Y (NAND2X1)                            0.03       6.54 f
+  car/CLA3/cla3/U8/Y (OAI21X1)                            0.05       6.59 r
+  car/CLA3/cla3/p (bit_cla_17)                            0.00       6.59 r
+  car/CLA3/U7/Y (INVX1)                                   0.04       6.62 f
+  car/CLA3/U3/Y (OAI21X1)                                 0.04       6.66 r
+  car/CLA3/gOut (four_bit_cla_5)                          0.00       6.66 r
+  car/U19/Y (AOI21X1)                                     0.02       6.68 f
+  car/U17/Y (INVX1)                                       0.02       6.71 r
+  car/CLA4/cin (four_bit_cla_4)                           0.00       6.71 r
+  car/CLA4/U13/Y (NAND2X1)                                0.01       6.72 f
+  car/CLA4/U8/Y (AND2X2)                                  0.04       6.76 f
+  car/CLA4/U9/Y (INVX1)                                   0.01       6.77 r
+  car/CLA4/cla1/c (bit_cla_15)                            0.00       6.77 r
+  car/CLA4/cla1/U7/Y (AND2X1)                             0.04       6.82 r
+  car/CLA4/cla1/U9/Y (AOI21X1)                            0.02       6.83 f
+  car/CLA4/cla1/U6/Y (BUFX2)                              0.04       6.88 f
+  car/CLA4/cla1/U1/Y (INVX8)                              0.08       6.96 r
+  car/CLA4/cla1/s (bit_cla_15)                            0.00       6.96 r
+  car/CLA4/s[1] (four_bit_cla_4)                          0.00       6.96 r
+  car/Sum[17] (carry_lookahead_adder32)                   0.00       6.96 r
+  result[17] (out)                                        0.00       6.96 r
+  data arrival time                                                  6.96
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -6.96
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.17
+
+
+  Startpoint: input_a[3] (input port clocked by clk)
+  Endpoint: result[20] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_a[3] (in)                                         0.00       5.70 r
+  C474/Y (AND2X2)                                         0.04       5.74 r
+  fa25/x (full_adder_175)                                 0.00       5.74 r
+  fa25/U9/Y (XOR2X1)                                      0.06       5.80 r
+  fa25/U1/Y (MUX2X1)                                      0.07       5.87 r
+  fa25/s (full_adder_175)                                 0.00       5.87 r
+  fa83/cin (full_adder_117)                               0.00       5.87 r
+  fa83/U2/Y (MUX2X1)                                      0.06       5.92 r
+  fa83/U1/Y (MUX2X1)                                      0.06       5.98 r
+  fa83/s (full_adder_117)                                 0.00       5.98 r
+  fa124/x (full_adder_76)                                 0.00       5.98 r
+  fa124/U3/Y (INVX1)                                      0.03       6.01 f
+  fa124/U13/Y (AOI21X1)                                   0.03       6.04 r
+  fa124/U9/Y (INVX1)                                      0.02       6.06 f
+  fa124/U10/Y (INVX1)                                     0.01       6.07 r
+  fa124/U12/Y (MUX2X1)                                    0.06       6.12 r
+  fa124/s (full_adder_76)                                 0.00       6.12 r
+  fa149/x (full_adder_51)                                 0.00       6.12 r
+  fa149/U3/Y (INVX2)                                      0.02       6.14 f
+  fa149/U2/Y (MUX2X1)                                     0.06       6.20 r
+  fa149/U1/Y (MUX2X1)                                     0.05       6.25 r
+  fa149/s (full_adder_51)                                 0.00       6.25 r
+  fa176/x (full_adder_24)                                 0.00       6.25 r
+  fa176/U6/Y (INVX1)                                      0.03       6.28 f
+  fa176/U13/Y (AOI21X1)                                   0.03       6.32 r
+  fa176/U10/Y (BUFX2)                                     0.04       6.35 r
+  fa176/U12/Y (MUX2X1)                                    0.05       6.41 r
+  fa176/s (full_adder_24)                                 0.00       6.41 r
+  fa186/x (full_adder_14)                                 0.00       6.41 r
+  fa186/U7/Y (OAI21X1)                                    0.03       6.43 f
+  fa186/U5/Y (NAND2X1)                                    0.02       6.46 r
+  fa186/c (full_adder_14)                                 0.00       6.46 r
+  car/B[17] (carry_lookahead_adder32)                     0.00       6.46 r
+  car/CLA4/y[1] (four_bit_cla_4)                          0.00       6.46 r
+  car/CLA4/cla1/b (bit_cla_15)                            0.00       6.46 r
+  car/CLA4/cla1/U5/Y (BUFX2)                              0.04       6.50 r
+  car/CLA4/cla1/U4/Y (INVX1)                              0.02       6.52 f
+  car/CLA4/cla1/U3/Y (MUX2X1)                             0.07       6.58 r
+  car/CLA4/cla1/p (bit_cla_15)                            0.00       6.58 r
+  car/CLA4/U2/Y (AND2X2)                                  0.04       6.62 r
+  car/CLA4/U18/Y (AOI22X1)                                0.02       6.64 f
+  car/CLA4/U3/Y (BUFX2)                                   0.04       6.68 f
+  car/CLA4/U17/Y (OAI21X1)                                0.04       6.72 r
+  car/CLA4/gOut (four_bit_cla_4)                          0.00       6.72 r
+  car/U9/Y (AOI21X1)                                      0.02       6.74 f
+  car/U8/Y (INVX1)                                        0.01       6.75 r
+  car/U4/Y (BUFX2)                                        0.04       6.79 r
+  car/CLA5/cin (four_bit_cla_3)                           0.00       6.79 r
+  car/CLA5/cla0/c (bit_cla_12)                            0.00       6.79 r
+  car/CLA5/cla0/U6/Y (NAND2X1)                            0.02       6.80 f
+  car/CLA5/cla0/U5/Y (OAI21X1)                            0.02       6.82 r
+  car/CLA5/cla0/s (bit_cla_12)                            0.00       6.82 r
+  car/CLA5/s[0] (four_bit_cla_3)                          0.00       6.82 r
+  car/U12/Y (INVX1)                                       0.04       6.86 f
+  car/U6/Y (INVX8)                                        0.09       6.95 r
+  car/Sum[20] (carry_lookahead_adder32)                   0.00       6.95 r
+  result[20] (out)                                        0.00       6.95 r
+  data arrival time                                                  6.95
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -6.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.17
+
+
+  Startpoint: input_b[5] (input port clocked by clk)
+  Endpoint: result[9] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[5] (in)                                         0.00       5.70 r
+  C345/Y (AND2X1)                                         0.07       5.77 r
+  fa5/cin (full_adder_195)                                0.00       5.77 r
+  fa5/U5/Y (XOR2X1)                                       0.06       5.83 r
+  fa5/U1/Y (MUX2X1)                                       0.06       5.89 r
+  fa5/s (full_adder_195)                                  0.00       5.89 r
+  fa74/x (full_adder_126)                                 0.00       5.89 r
+  fa74/U3/Y (INVX1)                                       0.03       5.92 f
+  fa74/U2/Y (MUX2X1)                                      0.05       5.97 r
+  fa74/U1/Y (MUX2X1)                                      0.06       6.03 r
+  fa74/s (full_adder_126)                                 0.00       6.03 r
+  fa115/x (full_adder_85)                                 0.00       6.03 r
+  fa115/U3/Y (INVX1)                                      0.03       6.06 f
+  fa115/U2/Y (MUX2X1)                                     0.05       6.11 r
+  fa115/U1/Y (MUX2X1)                                     0.06       6.17 r
+  fa115/s (full_adder_85)                                 0.00       6.17 r
+  fa140/x (full_adder_60)                                 0.00       6.17 r
+  fa140/U3/Y (INVX1)                                      0.03       6.20 f
+  fa140/U2/Y (MUX2X1)                                     0.05       6.26 r
+  fa140/U1/Y (MUX2X1)                                     0.06       6.31 r
+  fa140/s (full_adder_60)                                 0.00       6.31 r
+  ha35/x (half_adder_17)                                  0.00       6.31 r
+  ha35/U3/Y (AND2X1)                                      0.05       6.37 r
+  ha35/c (half_adder_17)                                  0.00       6.37 r
+  ha44/y (half_adder_8)                                   0.00       6.37 r
+  ha44/U2/Y (INVX1)                                       0.03       6.39 f
+  ha44/U1/Y (MUX2X1)                                      0.06       6.45 r
+  ha44/s (half_adder_8)                                   0.00       6.45 r
+  car/A[8] (carry_lookahead_adder32)                      0.00       6.45 r
+  car/CLA2/x[0] (four_bit_cla_6)                          0.00       6.45 r
+  car/CLA2/cla0/a (bit_cla_24)                            0.00       6.45 r
+  car/CLA2/cla0/U3/Y (MUX2X1)                             0.05       6.51 f
+  car/CLA2/cla0/p (bit_cla_24)                            0.00       6.51 f
+  car/CLA2/U13/Y (AOI21X1)                                0.04       6.55 r
+  car/CLA2/U12/Y (INVX1)                                  0.03       6.57 f
+  car/CLA2/cla1/c (bit_cla_23)                            0.00       6.57 f
+  car/CLA2/cla1/U1/Y (MUX2X1)                             0.04       6.61 r
+  car/CLA2/cla1/U3/Y (INVX1)                              0.02       6.64 f
+  car/CLA2/cla1/U4/Y (INVX2)                              0.32       6.95 r
+  car/CLA2/cla1/s (bit_cla_23)                            0.00       6.95 r
+  car/CLA2/s[1] (four_bit_cla_6)                          0.00       6.95 r
+  car/Sum[9] (carry_lookahead_adder32)                    0.00       6.95 r
+  result[9] (out)                                         0.00       6.95 r
+  data arrival time                                                  6.95
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -6.95
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.17
+
+
+  Startpoint: input_b[5] (input port clocked by clk)
+  Endpoint: result[8] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[5] (in)                                         0.00       5.70 r
+  C345/Y (AND2X1)                                         0.07       5.77 r
+  fa5/cin (full_adder_195)                                0.00       5.77 r
+  fa5/U5/Y (XOR2X1)                                       0.06       5.83 r
+  fa5/U1/Y (MUX2X1)                                       0.06       5.89 r
+  fa5/s (full_adder_195)                                  0.00       5.89 r
+  fa74/x (full_adder_126)                                 0.00       5.89 r
+  fa74/U3/Y (INVX1)                                       0.03       5.92 f
+  fa74/U2/Y (MUX2X1)                                      0.05       5.97 r
+  fa74/U1/Y (MUX2X1)                                      0.06       6.03 r
+  fa74/s (full_adder_126)                                 0.00       6.03 r
+  fa115/x (full_adder_85)                                 0.00       6.03 r
+  fa115/U3/Y (INVX1)                                      0.03       6.06 f
+  fa115/U2/Y (MUX2X1)                                     0.05       6.11 r
+  fa115/U1/Y (MUX2X1)                                     0.06       6.17 r
+  fa115/s (full_adder_85)                                 0.00       6.17 r
+  fa140/x (full_adder_60)                                 0.00       6.17 r
+  fa140/U3/Y (INVX1)                                      0.03       6.20 f
+  fa140/U2/Y (MUX2X1)                                     0.05       6.26 r
+  fa140/U1/Y (MUX2X1)                                     0.06       6.31 r
+  fa140/s (full_adder_60)                                 0.00       6.31 r
+  ha35/x (half_adder_17)                                  0.00       6.31 r
+  ha35/U3/Y (AND2X1)                                      0.05       6.37 r
+  ha35/c (half_adder_17)                                  0.00       6.37 r
+  ha44/y (half_adder_8)                                   0.00       6.37 r
+  ha44/U2/Y (INVX1)                                       0.03       6.39 f
+  ha44/U1/Y (MUX2X1)                                      0.06       6.45 r
+  ha44/s (half_adder_8)                                   0.00       6.45 r
+  car/A[8] (carry_lookahead_adder32)                      0.00       6.45 r
+  car/CLA2/x[0] (four_bit_cla_6)                          0.00       6.45 r
+  car/CLA2/cla0/a (bit_cla_24)                            0.00       6.45 r
+  car/CLA2/cla0/U3/Y (MUX2X1)                             0.07       6.53 r
+  car/CLA2/cla0/U2/Y (INVX1)                              0.03       6.56 f
+  car/CLA2/cla0/U1/Y (MUX2X1)                             0.04       6.60 r
+  car/CLA2/cla0/U6/Y (INVX1)                              0.02       6.63 f
+  car/CLA2/cla0/U7/Y (INVX2)                              0.32       6.94 r
+  car/CLA2/cla0/s (bit_cla_24)                            0.00       6.94 r
+  car/CLA2/s[0] (four_bit_cla_6)                          0.00       6.94 r
+  car/Sum[8] (carry_lookahead_adder32)                    0.00       6.94 r
+  result[8] (out)                                         0.00       6.94 r
+  data arrival time                                                  6.94
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -6.94
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+  Startpoint: input_b[5] (input port clocked by clk)
+  Endpoint: result[7] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[5] (in)                                         0.00       5.70 r
+  C345/Y (AND2X1)                                         0.07       5.77 r
+  fa5/cin (full_adder_195)                                0.00       5.77 r
+  fa5/U5/Y (XOR2X1)                                       0.06       5.83 r
+  fa5/U1/Y (MUX2X1)                                       0.06       5.89 r
+  fa5/s (full_adder_195)                                  0.00       5.89 r
+  fa74/x (full_adder_126)                                 0.00       5.89 r
+  fa74/U3/Y (INVX1)                                       0.03       5.92 f
+  fa74/U2/Y (MUX2X1)                                      0.05       5.97 r
+  fa74/U1/Y (MUX2X1)                                      0.06       6.03 r
+  fa74/s (full_adder_126)                                 0.00       6.03 r
+  fa115/x (full_adder_85)                                 0.00       6.03 r
+  fa115/U3/Y (INVX1)                                      0.03       6.06 f
+  fa115/U2/Y (MUX2X1)                                     0.05       6.11 r
+  fa115/U1/Y (MUX2X1)                                     0.06       6.17 r
+  fa115/s (full_adder_85)                                 0.00       6.17 r
+  fa140/x (full_adder_60)                                 0.00       6.17 r
+  fa140/U3/Y (INVX1)                                      0.03       6.20 f
+  fa140/U2/Y (MUX2X1)                                     0.05       6.26 r
+  fa140/U1/Y (MUX2X1)                                     0.06       6.31 r
+  fa140/s (full_adder_60)                                 0.00       6.31 r
+  ha35/x (half_adder_17)                                  0.00       6.31 r
+  ha35/U1/Y (MUX2X1)                                      0.06       6.38 r
+  ha35/s (half_adder_17)                                  0.00       6.38 r
+  ha43/x (half_adder_9)                                   0.00       6.38 r
+  ha43/U1/Y (MUX2X1)                                      0.06       6.44 r
+  ha43/s (half_adder_9)                                   0.00       6.44 r
+  car/A[7] (carry_lookahead_adder32)                      0.00       6.44 r
+  car/CLA1/x[3] (four_bit_cla_7)                          0.00       6.44 r
+  car/CLA1/cla3/a (bit_cla_25)                            0.00       6.44 r
+  car/CLA1/cla3/U3/Y (MUX2X1)                             0.05       6.48 r
+  car/CLA1/cla3/U1/Y (BUFX2)                              0.35       6.83 r
+  car/CLA1/cla3/s (bit_cla_25)                            0.00       6.83 r
+  car/CLA1/s[3] (four_bit_cla_7)                          0.00       6.83 r
+  car/Sum[7] (carry_lookahead_adder32)                    0.00       6.83 r
+  result[7] (out)                                         0.00       6.83 r
+  data arrival time                                                  6.83
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -6.83
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.29
+
+
+  Startpoint: input_b[5] (input port clocked by clk)
+  Endpoint: result[6] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[5] (in)                                         0.00       5.70 r
+  C343/Y (AND2X1)                                         0.06       5.76 r
+  fa3/x (full_adder_197)                                  0.00       5.76 r
+  fa3/U3/Y (INVX1)                                        0.03       5.78 f
+  fa3/U2/Y (MUX2X1)                                       0.05       5.84 r
+  fa3/U1/Y (MUX2X1)                                       0.06       5.90 r
+  fa3/s (full_adder_197)                                  0.00       5.90 r
+  fa72/x (full_adder_128)                                 0.00       5.90 r
+  fa72/U3/Y (INVX1)                                       0.03       5.93 f
+  fa72/U2/Y (MUX2X1)                                      0.05       5.98 r
+  fa72/U1/Y (MUX2X1)                                      0.06       6.04 r
+  fa72/s (full_adder_128)                                 0.00       6.04 r
+  fa113/x (full_adder_87)                                 0.00       6.04 r
+  fa113/U3/Y (INVX1)                                      0.03       6.07 f
+  fa113/U2/Y (MUX2X1)                                     0.05       6.12 r
+  fa113/U1/Y (MUX2X1)                                     0.06       6.18 r
+  fa113/s (full_adder_87)                                 0.00       6.18 r
+  ha28/x (half_adder_24)                                  0.00       6.18 r
+  ha28/U1/Y (MUX2X1)                                      0.06       6.24 r
+  ha28/s (half_adder_24)                                  0.00       6.24 r
+  ha33/x (half_adder_19)                                  0.00       6.24 r
+  ha33/U4/Y (AND2X1)                                      0.05       6.29 r
+  ha33/c (half_adder_19)                                  0.00       6.29 r
+  ha42/y (half_adder_10)                                  0.00       6.29 r
+  ha42/U2/Y (INVX1)                                       0.03       6.32 f
+  ha42/U1/Y (MUX2X1)                                      0.04       6.36 r
+  ha42/U4/Y (BUFX2)                                       0.35       6.71 r
+  ha42/s (half_adder_10)                                  0.00       6.71 r
+  car/A[6] (carry_lookahead_adder32)                      0.00       6.71 r
+  car/CLA1/x[2] (four_bit_cla_7)                          0.00       6.71 r
+  car/CLA1/cla2/a (bit_cla_26)                            0.00       6.71 r
+  car/CLA1/cla2/s (bit_cla_26)                            0.00       6.71 r
+  car/CLA1/s[2] (four_bit_cla_7)                          0.00       6.71 r
+  car/Sum[6] (carry_lookahead_adder32)                    0.00       6.71 r
+  result[6] (out)                                         0.00       6.71 r
+  data arrival time                                                  6.71
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -6.71
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.41
+
+
+  Startpoint: input_b[5] (input port clocked by clk)
+  Endpoint: result[5] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[5] (in)                                         0.00       5.70 r
+  C343/Y (AND2X1)                                         0.06       5.76 r
+  fa3/x (full_adder_197)                                  0.00       5.76 r
+  fa3/U3/Y (INVX1)                                        0.03       5.78 f
+  fa3/U2/Y (MUX2X1)                                       0.05       5.84 r
+  fa3/U1/Y (MUX2X1)                                       0.06       5.90 r
+  fa3/s (full_adder_197)                                  0.00       5.90 r
+  fa72/x (full_adder_128)                                 0.00       5.90 r
+  fa72/U3/Y (INVX1)                                       0.03       5.93 f
+  fa72/U2/Y (MUX2X1)                                      0.05       5.98 r
+  fa72/U1/Y (MUX2X1)                                      0.06       6.04 r
+  fa72/s (full_adder_128)                                 0.00       6.04 r
+  fa113/x (full_adder_87)                                 0.00       6.04 r
+  fa113/U3/Y (INVX1)                                      0.03       6.07 f
+  fa113/U2/Y (MUX2X1)                                     0.05       6.12 r
+  fa113/U1/Y (MUX2X1)                                     0.06       6.18 r
+  fa113/s (full_adder_87)                                 0.00       6.18 r
+  ha28/x (half_adder_24)                                  0.00       6.18 r
+  ha28/U1/Y (MUX2X1)                                      0.06       6.24 r
+  ha28/s (half_adder_24)                                  0.00       6.24 r
+  ha33/x (half_adder_19)                                  0.00       6.24 r
+  ha33/U1/Y (MUX2X1)                                      0.05       6.29 r
+  ha33/U3/Y (BUFX2)                                       0.35       6.64 r
+  ha33/s (half_adder_19)                                  0.00       6.64 r
+  car/A[5] (carry_lookahead_adder32)                      0.00       6.64 r
+  car/CLA1/x[1] (four_bit_cla_7)                          0.00       6.64 r
+  car/CLA1/cla1/a (bit_cla_27)                            0.00       6.64 r
+  car/CLA1/cla1/s (bit_cla_27)                            0.00       6.64 r
+  car/CLA1/s[1] (four_bit_cla_7)                          0.00       6.64 r
+  car/Sum[5] (carry_lookahead_adder32)                    0.00       6.64 r
+  result[5] (out)                                         0.00       6.64 r
+  data arrival time                                                  6.64
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -6.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.49
+
+
+  Startpoint: input_b[3] (input port clocked by clk)
+  Endpoint: result[4] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[3] (in)                                         0.00       5.70 r
+  C311/Y (AND2X1)                                         0.06       5.76 r
+  fa1/x (full_adder_199)                                  0.00       5.76 r
+  fa1/U3/Y (INVX1)                                        0.03       5.78 f
+  fa1/U2/Y (MUX2X1)                                       0.05       5.84 r
+  fa1/U1/Y (MUX2X1)                                       0.06       5.90 r
+  fa1/s (full_adder_199)                                  0.00       5.90 r
+  fa70/x (full_adder_130)                                 0.00       5.90 r
+  fa70/U3/Y (INVX1)                                       0.03       5.93 f
+  fa70/U2/Y (MUX2X1)                                      0.05       5.98 r
+  fa70/U1/Y (MUX2X1)                                      0.06       6.04 r
+  fa70/s (full_adder_130)                                 0.00       6.04 r
+  ha17/x (half_adder_35)                                  0.00       6.04 r
+  ha17/U3/Y (AND2X1)                                      0.05       6.09 r
+  ha17/c (half_adder_35)                                  0.00       6.09 r
+  ha27/y (half_adder_25)                                  0.00       6.09 r
+  ha27/U2/Y (INVX1)                                       0.03       6.12 f
+  ha27/U1/Y (MUX2X1)                                      0.04       6.16 r
+  ha27/U4/Y (BUFX2)                                       0.35       6.51 r
+  ha27/s (half_adder_25)                                  0.00       6.51 r
+  car/A[4] (carry_lookahead_adder32)                      0.00       6.51 r
+  car/CLA1/x[0] (four_bit_cla_7)                          0.00       6.51 r
+  car/CLA1/cla0/a (bit_cla_28)                            0.00       6.51 r
+  car/CLA1/cla0/s (bit_cla_28)                            0.00       6.51 r
+  car/CLA1/s[0] (four_bit_cla_7)                          0.00       6.51 r
+  car/Sum[4] (carry_lookahead_adder32)                    0.00       6.51 r
+  result[4] (out)                                         0.00       6.51 r
+  data arrival time                                                  6.51
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -6.51
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.61
+
+
+  Startpoint: input_b[3] (input port clocked by clk)
+  Endpoint: result[3] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[3] (in)                                         0.00       5.70 r
+  C311/Y (AND2X1)                                         0.06       5.76 r
+  fa1/x (full_adder_199)                                  0.00       5.76 r
+  fa1/U3/Y (INVX1)                                        0.03       5.78 f
+  fa1/U2/Y (MUX2X1)                                       0.05       5.84 r
+  fa1/U1/Y (MUX2X1)                                       0.06       5.90 r
+  fa1/s (full_adder_199)                                  0.00       5.90 r
+  fa70/x (full_adder_130)                                 0.00       5.90 r
+  fa70/U3/Y (INVX1)                                       0.03       5.93 f
+  fa70/U2/Y (MUX2X1)                                      0.05       5.98 r
+  fa70/U1/Y (MUX2X1)                                      0.06       6.04 r
+  fa70/s (full_adder_130)                                 0.00       6.04 r
+  ha17/x (half_adder_35)                                  0.00       6.04 r
+  ha17/U1/Y (MUX2X1)                                      0.05       6.08 r
+  ha17/U4/Y (BUFX2)                                       0.35       6.43 r
+  ha17/s (half_adder_35)                                  0.00       6.43 r
+  car/A[3] (carry_lookahead_adder32)                      0.00       6.43 r
+  car/CLA0/x[3] (four_bit_cla_0)                          0.00       6.43 r
+  car/CLA0/cla3/a (bit_cla_29)                            0.00       6.43 r
+  car/CLA0/cla3/s (bit_cla_29)                            0.00       6.43 r
+  car/CLA0/s[3] (four_bit_cla_0)                          0.00       6.43 r
+  car/Sum[3] (carry_lookahead_adder32)                    0.00       6.43 r
+  result[3] (out)                                         0.00       6.43 r
+  data arrival time                                                  6.43
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -6.43
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.69
+
+
+  Startpoint: input_b[2] (input port clocked by clk)
+  Endpoint: result[2] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[2] (in)                                         0.00       5.70 r
+  U76/Y (AND2X1)                                          0.06       5.76 r
+  fa0/x (full_adder_0)                                    0.00       5.76 r
+  fa0/U3/Y (INVX1)                                        0.03       5.78 f
+  fa0/U2/Y (MUX2X1)                                       0.05       5.84 r
+  fa0/U1/Y (MUX2X1)                                       0.06       5.90 r
+  fa0/s (full_adder_0)                                    0.00       5.90 r
+  ha10/x (half_adder_42)                                  0.00       5.90 r
+  ha10/U1/Y (MUX2X1)                                      0.05       5.94 r
+  ha10/U4/Y (BUFX2)                                       0.35       6.29 r
+  ha10/s (half_adder_42)                                  0.00       6.29 r
+  car/A[2] (carry_lookahead_adder32)                      0.00       6.29 r
+  car/CLA0/x[2] (four_bit_cla_0)                          0.00       6.29 r
+  car/CLA0/cla2/a (bit_cla_30)                            0.00       6.29 r
+  car/CLA0/cla2/s (bit_cla_30)                            0.00       6.29 r
+  car/CLA0/s[2] (four_bit_cla_0)                          0.00       6.29 r
+  car/Sum[2] (carry_lookahead_adder32)                    0.00       6.29 r
+  result[2] (out)                                         0.00       6.29 r
+  data arrival time                                                  6.29
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -6.29
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.83
+
+
+  Startpoint: input_b[0] (input port clocked by clk)
+  Endpoint: result[1] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_b[0] (in)                                         0.00       5.70 r
+  U78/Y (AND2X1)                                          0.06       5.76 r
+  ha0/y (half_adder_0)                                    0.00       5.76 r
+  ha0/U2/Y (INVX1)                                        0.03       5.79 f
+  ha0/U1/Y (MUX2X1)                                       0.04       5.83 r
+  ha0/U4/Y (BUFX2)                                        0.35       6.18 r
+  ha0/s (half_adder_0)                                    0.00       6.18 r
+  car/A[1] (carry_lookahead_adder32)                      0.00       6.18 r
+  car/CLA0/x[1] (four_bit_cla_0)                          0.00       6.18 r
+  car/CLA0/cla1/a (bit_cla_31)                            0.00       6.18 r
+  car/CLA0/cla1/s (bit_cla_31)                            0.00       6.18 r
+  car/CLA0/s[1] (four_bit_cla_0)                          0.00       6.18 r
+  car/Sum[1] (carry_lookahead_adder32)                    0.00       6.18 r
+  result[1] (out)                                         0.00       6.18 r
+  data arrival time                                                  6.18
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -6.18
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.94
+
+
+  Startpoint: input_a[0] (input port clocked by clk)
+  Endpoint: result[0] (output port clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             1.90       1.90
+  input external delay                                    3.80       5.70 r
+  input_a[0] (in)                                         0.00       5.70 r
+  C263/Y (AND2X2)                                         0.35       6.05 r
+  car/A[0] (carry_lookahead_adder32)                      0.00       6.05 r
+  car/CLA0/x[0] (four_bit_cla_0)                          0.00       6.05 r
+  car/CLA0/cla0/a (bit_cla_0)                             0.00       6.05 r
+  car/CLA0/cla0/s (bit_cla_0)                             0.00       6.05 r
+  car/CLA0/s[0] (four_bit_cla_0)                          0.00       6.05 r
+  car/Sum[0] (carry_lookahead_adder32)                    0.00       6.05 r
+  result[0] (out)                                         0.00       6.05 r
+  data arrival time                                                  6.05
+
+  clock clk (rise edge)                                   9.50       9.50
+  clock network delay (ideal)                             1.90      11.40
+  clock uncertainty                                      -0.47      10.92
+  output external delay                                  -3.80       7.12
+  data required time                                                 7.12
+  --------------------------------------------------------------------------
+  data required time                                                 7.12
+  data arrival time                                                 -6.05
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.08
+
+
+1
